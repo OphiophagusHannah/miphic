@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.section-block {
+  height: 100vh;
+  background: grey;
+  padding: 2rem;
+  padding-left: 10rem;
+}
+
+.section-block:nth-child(even) {
+  background: #9e9e9e;
+}
+
+.section-block h2 {
+  font-size: 24px;
+}
+
+.section-footer {
+  height: 70vh;
+  background: #2a2a2a;
+  padding: 2rem;
+  padding-left: 10rem;
+}
+
+.section-footer h2 {
+  font-size: 24px;
+  color: lightgrey;
+}
+
+.section-hero {
+  height: 100vh;
+  background: grey;
+  padding: 2rem;
+  padding-left: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-hero h1 {
+  font-size: 9rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section-hero h3 {
+  font-size: 2.5rem;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}
+
+.navigation-wrapper {
+  padding-left: 0;
+  padding-bottom: 7rem;
+  padding-left: 4rem;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  min-width: 240px;
+  max-width: 360px;
+  z-index: 999;
+  height: 100%;
+  background: #6b6b6b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.nav-wrapper a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.nav-wrapper a li {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.main-wrapper {
+  width: 80%;
+  margin-left: 20%;
+  margin-top: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-navigation-wrapper {
+  padding: 0;
+}
+
+.footer-navigation-wrapper a {
+  text-decoration: none;
+  color: lightgrey;
+  display: block;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.footer-navigation-wrapper a li {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=App.css.map */
