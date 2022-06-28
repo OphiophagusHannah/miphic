@@ -1,24 +1,9 @@
 import React from 'react';
 
 
-const PostPreview = ({post, noImage}) => {
-    console.log(noImage)
+const PostPreview = ({post}) => {
     return (
         <div className="post-preview">
-            {/* {
-                (() => {
-                    if (noImage !== true) {
-                        return (
-                            <div className="cover-image-wrapper">
-                                <img className="cover-image" src={ post.coverImage.url } />
-                            </div>
-                        )
-                    } else {
-                        return null;
-                    }
-                })()
-            } */}
-
             <section className="section-hero" >
                 <h1>{ post.heroTitle }</h1>
                 <h3>{ post.heroBody }</h3>

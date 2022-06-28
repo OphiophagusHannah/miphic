@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 function Nav() {
     return (
@@ -17,9 +17,6 @@ function Nav() {
                 <a href="#what-we-offer" className="nav-link"><li>what we offer</li></a>
                 <a href="#how-it-works" className="nav-link"><li>how it works</li></a>
                 <a href="#data-analysis" className="nav-link"><li>data-analysis</li></a>
-                {/* <Link to="/concept" className="nav-link"><li>technology</li></Link> */}
-                {/* <Link to="/projects" className="nav-link"><li>projects</li></Link> */}
-                {/* <Link to="/business" className="nav-link"><li>business(hidden)</li></Link> */}
                 <a href="mailto:hannaleibscher@gmail.com" className="nav-link nav-link--end"><li>get in touch</li></a>
             </ul>
         </nav>
