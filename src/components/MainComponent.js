@@ -5,7 +5,7 @@ import GraphCMSContent from '../services/graphcms';
 import Nav from '../components/Nav';
 
 const Main = props => {
-    const [posts, setPosts] = React.useState([]);
+    const [setPosts] = React.useState([]);
     const Client = new GraphCMSContent();
     const LoadingPostsJsx = () => (
         <div>
