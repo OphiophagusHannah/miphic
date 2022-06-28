@@ -4,7 +4,7 @@ import PostsPreview from '../components/postPreview';
 import GraphCMSContent from '../services/graphcms';
 import Nav from '../components/Nav';
 
-const Home = props => {
+const Main = props => {
     const [posts, setPosts] = React.useState([]);
     const Client = new GraphCMSContent();
     const LoadingPostsJsx = () => (
@@ -21,7 +21,7 @@ const Home = props => {
         <>
             <div className="">
                 <Nav/>
-                <div className="border p-3">
+                <div className="">
                     <Query query={Client.fetchPosts()}>
                         {
                             ({loading, error, data}) => {
@@ -43,4 +43,4 @@ const Home = props => {
         </>
     );
 };
-export default Home;
+export default Main;
