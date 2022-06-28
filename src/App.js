@@ -19,9 +19,9 @@ class App extends Component {
       <Router>
 
         <div className="wrapper">
-        <Nav />
+        {/* <Nav /> */}
         <Main />
-        <GoToTop />
+        {/* <GoToTop /> */}
         </div>
 
 

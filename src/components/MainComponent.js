@@ -1,66 +1,46 @@
-import React, { Component } from 'react';
-import { Routes, Route } from 'react-router-dom';
-// import Financial from '../pages/Financial';
-// import About from '../pages/About';
-// import Concept from '../pages/Concept';
-// import Projects from '../pages/Projects';
-import Home from '../pages/Home';
-// import Team from '../pages/Team';
+import React from 'react';
+import { Query } from 'react-apollo';
+import PostsPreview from '../components/postPreview';
+import GraphCMSContent from '../services/graphcms';
+import Nav from '../components/Nav';
 
-class Main extends Component {
-
-    render() {
-
-        const HomePage = () => {
-            return (
-                <Home />
-            );
-        }
-
-        // const AboutPage = () => {
-        //     return (
-        //         <About />
-        //     );
-        // }
-
-        // const ConceptPage = () => {
-        //     return (
-        //         <Concept />
-        //     );
-        // }
-
-        // const ProjectsPage = () => {
-        //     return (
-        //         <Projects />
-        //     );
-        // }
-
-        // const FinancialPage = () => {
-        //     return (
-        //         <Financial />
-        //     );
-        // }
-
-        // const TeamPage = () => {
-        //     return (
-        //         <Team />
-        //     );
-        // }
-
-
-        return (
-            <div className="main-wrapper">
-                <Routes>
-                    <Route path='/' component={HomePage}  element={<Home />}/>
-                    {/* <Route exact path='/about' component={AboutPage} element={<About />} />
-                    <Route exact path='/concept' component={ConceptPage} element={<Concept />} />
-                    <Route exact path='/projects' component={ProjectsPage} element={<Projects />} />
-                    <Route exact path='/business' component={FinancialPage} element={<Financial />} />
-                    <Route exact path='/team' component={TeamPage} element={<Team />} />                */}
-                </Routes>
+const Home = props => {
+    const [posts, setPosts] = React.useState([]);
+    const Client = new GraphCMSContent();
+    const LoadingPostsJsx = () => (
+        <div>
+            Loading...
+        </div>
+    );
+    const ErrorLoadingPostsJsx = () => (
+        <div className="mx-auto alert-danger">
+            Error!
+        </div>
+    );
+    return (
+        <>
+            <div className="">
+                <Nav/>
+                <div className="border p-3">
+                    <Query query={Client.fetchPosts()}>
+                        {
+                            ({loading, error, data}) => {
+                                if (loading) return LoadingPostsJsx();
+                                if (error) {
+                                    console.log(error);
+                                    return ErrorLoadingPostsJsx();
+                                }
+                                const POSTS = data.posts;
+                                setPosts(POSTS);
+                                return POSTS.slice(0,6).map(post => (
+                                    <PostsPreview post={post} />
+                                ));
+                            }
+                        }
+                    </Query>
+                </div>
             </div>
-        );
-    }
-}
-
-export default Main;
+        </>
+    );
+};
+export default Home;
