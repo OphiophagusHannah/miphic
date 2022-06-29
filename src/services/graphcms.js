@@ -55,6 +55,14 @@ export default class GraphCMSContent {
             markdown
             text
           }
+          beforeTechnologyImage {
+            id
+            url
+          }
+          afterTechnologyImage {
+            id
+            url
+          }
           technologyColumnFirst {
             raw
             html
@@ -86,10 +94,7 @@ export default class GraphCMSContent {
             text
           }
           createdAt
-          coverImage {
-            id
-            url
-          }
+
         }
       }
     `;
