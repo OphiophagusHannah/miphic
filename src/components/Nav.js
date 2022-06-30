@@ -15,8 +15,9 @@ function Nav() {
                 </div></li></a>
                 <AnchorLink href="#our-mission" className="nav-link"><li>our mission</li></AnchorLink>
                 <AnchorLink href="#what-we-offer" className="nav-link"><li>what we offer</li></AnchorLink>
+                
                 <AnchorLink href="#how-it-works" className="nav-link"><li>our approach</li></AnchorLink>
-                <AnchorLink href="#advantages" className="nav-link"><li>advantages</li></AnchorLink>
+                <AnchorLink href="#advantages" className="nav-link"><li>platform benefits</li></AnchorLink>
                 <a href="mailto:hannaleibscher@gmail.com" className="nav-link nav-link--end"><li>get in touch</li></a>
             </ul>
         </nav>

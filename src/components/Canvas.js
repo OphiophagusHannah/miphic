@@ -254,7 +254,7 @@ const Canvas = props => {
           let vector = { x: e.clientX - pos.x, y: e.clientY - pos.y };
           angle = Math.atan2(vector.y, vector.x);
           hover = true;
-        //   blob.color = 'rgba(7, 0, 210, 0.5)';
+          blob.color = 'rgba(18, 184, 255, 0.5)';
         } else if (dist > blob.radius && hover === true) {
           let vector = { x: e.clientX - pos.x, y: e.clientY - pos.y };
           angle = Math.atan2(vector.y, vector.x);
