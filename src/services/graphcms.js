@@ -49,6 +49,19 @@ export default class GraphCMSContent {
             markdown
             text
           }
+          moreOffers {
+            raw
+            html
+            markdown
+            text
+          }
+
+          bigDataColumn {
+            raw
+            html
+            markdown
+            text
+          }
           technologyHeading {
             raw
             html
@@ -88,6 +101,12 @@ export default class GraphCMSContent {
             text
           }
           mlContent {
+            raw
+            html
+            markdown
+            text
+          }
+          contactUsHeading {
             raw
             html
             markdown

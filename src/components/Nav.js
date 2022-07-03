@@ -18,6 +18,7 @@ function Nav() {
                 
                 <AnchorLink href="#how-it-works" className="nav-link"><li>our approach</li></AnchorLink>
                 <AnchorLink href="#advantages" className="nav-link"><li>platform benefits</li></AnchorLink>
+                <AnchorLink href="#data" className="nav-link"><li>big data analysis</li></AnchorLink>
                 <a href="mailto:hannaleibscher@gmail.com" className="nav-link nav-link--end"><li>get in touch</li></a>
             </ul>
         </nav>

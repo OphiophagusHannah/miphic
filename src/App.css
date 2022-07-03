@@ -9,6 +9,10 @@ body * {
   max-width: 1200px;
 }
 
+.cover-image.cover-image-hide {
+  display: none;
+}
+
 .section-block,
 .section-subblock,
 .section-hero {
@@ -16,6 +20,10 @@ body * {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.section-subblock {
+  padding-bottom: 10rem;
 }
 
 .section-block {
@@ -495,5 +503,110 @@ h3.text-statement {
   -webkit-text-fill-color: #2f1383;
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
+}
+
+.section-services .tag {
+  padding-top: 15rem;
+}
+
+.section-services h3.offer-heading {
+  width: 70%;
+  font-size: 36px;
+  font-weight: 300;
+  background: -webkit-linear-gradient(0deg, #12b8ff, #96ff94);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-services .columns-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-services .dot {
+  border: 3px solid rgba(221, 230, 238, 0.5);
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: rgba(221, 230, 238, 0.5);
+}
+
+.section-services .line {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  width: 30%;
+  padding-top: 1.5rem;
+}
+
+.section-services .line h3 {
+  font-size: 30px;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+
+.section-services .line ul {
+  padding-left: 1.5rem;
+}
+
+.section-services .line p, .section-services .line li {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: .5rem;
+}
+
+.section-services .line .button {
+  margin-top: 1rem;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(0deg, #12b8ff, #96ff94);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-services .additional-services {
+  border-top: 1px solid #a5c4e4;
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-services .additional-services .line {
+  width: 30%;
+  padding-right: 5%;
+  margin-top: 0;
+}
+
+.section-services .additional-services .line h4 p {
+  font-size: 20px;
+  width: 100%;
+  line-height: 1.1;
+}
+
+.section-services .additional-services .line .button {
+  font-size: 19px;
+  font-weight: 600;
 }
 /*# sourceMappingURL=App.css.map */
