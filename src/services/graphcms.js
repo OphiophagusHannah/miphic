@@ -28,6 +28,7 @@ export default class GraphCMSContent {
           tagApproach
           tagBenefits
           tagData
+          contactEmail
           offerHeading {
             raw
             html

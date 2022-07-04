@@ -65,7 +65,7 @@ const PostPreview = ({post, noImage}) => {
                 <div className="additional-services" data-aos={"fade-up"}>
                     <div className="line">
                         <h4 dangerouslySetInnerHTML={{__html: post.moreOffers.html }}></h4>
-                        <a href="mailto:info@miphic.co" className="button">Send Us Message</a>
+                        <a href={ post.contactEmail } className="button">Send Us Message</a>
                     </div>
                     <div className="line">
                         <h4  dangerouslySetInnerHTML={{__html: post.bigDataColumn.html }}></h4>
@@ -143,7 +143,7 @@ const PostPreview = ({post, noImage}) => {
             <section className="section-block section-block--contact" id="contact" data-aos={"fade-up"}>
                 <div className="contact-block">
                 <div className="contact-heading" dangerouslySetInnerHTML={{__html: post.contactUsHeading.html }}></div>
-                <a href="mailto:info@miphic.co" className="button">Send Message</a>
+                <a href={ post.contactEmail } className="button">Send Message</a>
                 </div>
             </section>
             </FadeIn>
