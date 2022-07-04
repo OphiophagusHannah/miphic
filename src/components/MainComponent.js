@@ -9,7 +9,7 @@ const Main = props => {
     const [posts, setPosts] = React.useState([]);
     const Client = new GraphCMSContent();
     const LoadingPostsJsx = () => (
-        <div className="section-hero" >
+        <div className="section-hero section-loading" >
   
         </div>
     );

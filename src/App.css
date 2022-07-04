@@ -17,6 +17,10 @@ body * {
   margin-bottom: 10rem;
 }
 
+.section-loading {
+  min-height: 100vh;
+}
+
 .section-block {
   min-height: 100vh;
   display: -webkit-box;
@@ -225,7 +229,7 @@ body * {
 }
 
 .section-hero {
-  height: 90vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -851,8 +855,11 @@ h3.text-statement {
   .hero-inner {
     width: 100% !important;
   }
+  .section-hero {
+    padding-top: 10rem !important;
+  }
   .line,
-  .section-subblockn {
+  .section-subblock {
     margin-bottom: 0 !important;
   }
   .additional-services {
@@ -897,7 +904,10 @@ h3.text-statement {
     font-size: 16px !important;
   }
   .left-column .tag {
-    padding-top: 8rem;
+    padding-top: 8rem !important;
+  }
+  .nav-wrapper a {
+    text-transform: uppercase !important;
   }
 }
 /*# sourceMappingURL=App.css.map */

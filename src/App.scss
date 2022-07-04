@@ -19,6 +19,10 @@ body *{
   margin-bottom: 10rem;
 }
 
+.section-loading {
+  min-height: 100vh;
+}
+
 .section-block {
   min-height: 100vh;
   display: flex;
@@ -212,7 +216,7 @@ body *{
 // Hero 
 
 .section-hero {
-  height: 90vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -801,8 +805,12 @@ h3.text-statement {
 
   }
 
+  .section-hero {
+    padding-top: 10rem !important;
+  }
+
   .line,
-  .section-subblockn {
+  .section-subblock {
     margin-bottom: 0 !important;
   }
 
@@ -856,7 +864,11 @@ h3.text-statement {
 
   .left-column {
     .tag {
-      padding-top: 8rem;
+      padding-top: 8rem !important;
     }
+  }
+
+  .nav-wrapper a {
+    text-transform: uppercase !important;
   }
 }
