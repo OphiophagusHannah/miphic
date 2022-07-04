@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-apollo": "^3.1.5",
+    "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
     "react-fade-in": "^2.0.1",
     "react-rangeslider-extended": "^1.0.10",

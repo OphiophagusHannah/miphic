@@ -203,6 +203,27 @@ body * {
   transition: 2s ease-in-out;
 }
 
+@media only screen and (max-width: 768px) {
+  .nav-wrapper a:not(.nav-link--end) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .nav-wrapper a:not(.nav-link--end) li {
+    padding-right: 0 !important;
+  }
+  .navigation-wrapper {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+    padding: 1rem  2rem !important;
+    padding-bottom: 3rem;
+  }
+  .nav-link--end {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 .section-hero {
   height: 90vh;
   display: -webkit-box;
@@ -804,6 +825,9 @@ h3.text-statement {
   h2.mission-statement {
     font-size: 42px !important;
   }
+  .tag {
+    padding-top: 5rem;
+  }
   .columns-wrapper,
   .block-inner-wrapper,
   .navigation-wrapper {
@@ -871,6 +895,9 @@ h3.text-statement {
   .right-column .toggle-buttons h4 {
     padding: 0  !important;
     font-size: 16px !important;
+  }
+  .left-column .tag {
+    padding-top: 8rem;
   }
 }
 /*# sourceMappingURL=App.css.map */
