@@ -204,7 +204,7 @@ body * {
 }
 
 .section-hero {
-  height: 100vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -688,11 +688,9 @@ h3.text-statement {
 }
 
 .ml-block h2 {
-  position: relative;
   z-index: 10;
   font-size: 32px;
   margin-bottom: 1.5rem;
-  margin-top: -4rem;
   text-transform: uppercase;
 }
 
@@ -796,5 +794,83 @@ h3.text-statement {
   -webkit-text-fill-color: #2f1383;
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 102px !important;
+    margin-left: -6px !important;
+  }
+  h2.mission-statement {
+    font-size: 42px !important;
+  }
+  .columns-wrapper,
+  .block-inner-wrapper,
+  .navigation-wrapper {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  .section-hero,
+  .section-block {
+    height: auto !important;
+  }
+  h3,
+  h4,
+  ul,
+  .column,
+  .line,
+  .offer-heading,
+  .block-inner,
+  .hero-inner {
+    width: 100% !important;
+  }
+  .line,
+  .section-subblockn {
+    margin-bottom: 0 !important;
+  }
+  .additional-services {
+    margin-bottom: 0 !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  .right-column,
+  .left-column {
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+  .left-column {
+    padding-bottom: 2.5rem;
+  }
+  .ml {
+    padding-left: 0 !important;
+  }
+  .contact-heading {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .contact-heading h3, .contact-heading h4 {
+    text-align: center  !important;
+    padding-bottom: 0 !important;
+  }
+  .right-column svg {
+    width: 100% !important;
+  }
+  .right-column .toggle-buttons h4 {
+    padding: 0  !important;
+    font-size: 16px !important;
+  }
 }
 /*# sourceMappingURL=App.css.map */

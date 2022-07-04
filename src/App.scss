@@ -183,9 +183,7 @@ body *{
 // Hero 
 
 .section-hero {
-  height:100vh;
-  // background: grey;
-
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,7 +201,6 @@ body *{
 
 .hero-inner {
   width: 70%;
-
   h1 {
     font-size: 190px;
     margin-left: -15px;
@@ -634,11 +631,11 @@ h3.text-statement {
   }
 
   h2 {
-    position: relative;
+    // position: relative;
     z-index: 10;
     font-size: 32px;
     margin-bottom: 1.5rem;
-    margin-top: -4rem;
+    // margin-top: -4rem;
     text-transform: uppercase;
   }
 
@@ -732,4 +729,98 @@ h3.text-statement {
       transition: 2s ease-in-out;
     }
   }
+}
+
+//@at-root
+
+@media only screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 102px !important;
+    margin-left: -6px !important;
+  }
+
+  h2.mission-statement {
+    font-size: 42px !important;
+  }
+
+  .columns-wrapper,
+  .block-inner-wrapper,
+  .navigation-wrapper {
+    align-items: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .section-hero,
+  .section-block {
+    height: auto!important;
+  }
+
+  h3,
+  h4, 
+  ul, 
+  .column,
+  .line,
+  .offer-heading,
+  .block-inner,
+  .hero-inner {
+    width: 100%!important;
+
+  }
+
+  .line,
+  .section-subblockn {
+    margin-bottom: 0 !important;
+  }
+
+  .additional-services {
+    margin-bottom: 0 !important;
+    flex-wrap: wrap !important;
+  }
+
+  .right-column,
+  .left-column {
+    padding-right: 0 !important;
+    width:
+     100%!important;
+  }
+
+  .left-column {
+    padding-bottom: 2.5rem;
+  }
+
+  .ml {
+    padding-left: 0 !important;
+  }
+
+  .contact-heading {
+    padding-top: 5rem !important;
+
+    padding-bottom: 5rem !important;
+    display: flex !important;
+     flex-direction: column !important;
+     align-items: center !important;
+
+     h3, h4 {
+      text-align: center  !important;
+      padding-bottom: 0 !important;
+     }
+  }
+
+  .right-column {
+
+  
+    svg {
+      width: 100% !important;
+    }
+
+    .toggle-buttons h4 {
+      padding: 0  !important;
+      font-size: 16px !important;
+    }
+    
+  }
+
+
+
 }
