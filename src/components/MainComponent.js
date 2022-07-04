@@ -10,7 +10,7 @@ const Main = props => {
     const Client = new GraphCMSContent();
     const LoadingPostsJsx = () => (
         <div className="section-hero" >
-            Loading...
+  
         </div>
     );
     const ErrorLoadingPostsJsx = () => (

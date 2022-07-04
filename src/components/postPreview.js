@@ -1,7 +1,7 @@
 import {React, useState} from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-
+import FadeIn from 'react-fade-in';
 
 
 const PostPreview = ({post, noImage}) => {
@@ -16,9 +16,8 @@ const PostPreview = ({post, noImage}) => {
 
 
     return (
-        
         <div className="post-preview">
-         
+            <FadeIn>
             <section className="section-hero" data-aos={"fade-up"} >
                 <div className="hero-inner">                
                     <h1>{ post.heroTitle }</h1>
@@ -163,7 +162,7 @@ const PostPreview = ({post, noImage}) => {
                 <a href="mailto:test@gmail.com" className="button">Send Message</a>
                 </div>
             </section>
-     
+            </FadeIn>
         </div>
     );
 };
