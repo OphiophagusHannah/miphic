@@ -27,7 +27,7 @@ const PostPreview = ({post, noImage}) => {
 
             <section className="section-block" id="our-mission" data-aos={"fade-up"}>
                 <div className="block-inner-wrapper">
-                    <span className="tag">Our Mission</span>
+                    <span className="tag">{ post.tagMission }</span>
                     <div className="block-inner">    
                         <h3 className="text-statement">{ post.statementSubheading }</h3>
                         <h2 className="mission-statement">{ post.statement }</h2>
@@ -37,30 +37,14 @@ const PostPreview = ({post, noImage}) => {
 
             <section className="section-subblock important-section" data-aos={"fade-up"}>
                 <div className="block-inner">
-                    <span className="">importance</span>
+                    <span className="">{ post.tagImportance }</span>
                     <div className="important-heading" dangerouslySetInnerHTML={{__html: post.offerHeading.html }}> 
                     </div>
                 </div>
             </section>
 
-            {/* <section className="section-block section-offer" id="what-we-offer">
-                <h3 className="offer-heading"  dangerouslySetInnerHTML={{__html: post.columnsHeading.html }}></h3>
-                <div className="columns-wrapper">
-                    <div className="line" dangerouslySetInnerHTML={{__html: post.offerColumnFirst.html }}></div>
-                    <div className="line" dangerouslySetInnerHTML={{__html: post.offerColumnSecond.html }}></div>
-                    <div className="line" dangerouslySetInnerHTML={{__html: post.offerColumnThird.html }}></div>
-                </div>
-                <div className="special-request">
-                    <p> Do you have some special mitochondrial screening request?</p>
-                <a href="mailto:test@gmail.com" className="button">Send Us Message</a>
-                </div>
-                <div className="special-request"> But we don't stop after mitochondrial screening..... we also analyze big data!
-                <AnchorLink href="#data" cclassName="button">big data analysis</AnchorLink>
-                </div>
-            </section> */}
-
             <section className="section-block section-services" id="what-we-offer" data-aos={"fade-up"}>
-                <span className="tag">what We Offer</span>
+                <span className="tag">{ post.tagOffer }</span>
                 <h3 className="offer-heading"  dangerouslySetInnerHTML={{__html: post.columnsHeading.html }}></h3>
 
                 <div className="columns-wrapper">
@@ -81,7 +65,7 @@ const PostPreview = ({post, noImage}) => {
                 <div className="additional-services" data-aos={"fade-up"}>
                     <div className="line">
                         <h4 dangerouslySetInnerHTML={{__html: post.moreOffers.html }}></h4>
-                        <a href="mailto:test@gmail.com" className="button">Send Us Message</a>
+                        <a href="mailto:info@miphic.co" className="button">Send Us Message</a>
                     </div>
                     <div className="line">
                         <h4  dangerouslySetInnerHTML={{__html: post.bigDataColumn.html }}></h4>
@@ -93,7 +77,7 @@ const PostPreview = ({post, noImage}) => {
             <section className="section-block" id="how-it-works" data-aos={"fade-up"}>
                 <div className="block-inner-wrapper block-inner-wrapper--top">
                     <div className="left-column">
-                        <span className="tag">Our Approach</span>
+                        <span className="tag">{ post.tagApproach }</span>
                         <h3 dangerouslySetInnerHTML={{__html: post.technologyHeading.html }}></h3>
                     </div>
                     <div className="right-column" >
@@ -135,7 +119,7 @@ const PostPreview = ({post, noImage}) => {
 
             <section className="section-block section-advantages" id="advantages" data-aos={"fade-up"}>
                 <div className="block-inner-wrapper ">
-                    <span className="tag">Platform Benefits</span>
+                    <span className="tag">{ post.tagBenefits }</span>
                     <div className="block-inner">
                         <div className="block-inner-wrapper ">
                             <div className="column"><span>01</span><div dangerouslySetInnerHTML={{__html: post.technologyColumnFirst.html }}></div></div>
@@ -150,7 +134,7 @@ const PostPreview = ({post, noImage}) => {
 
             <section className="section-block ml-block" id="data" data-aos={"fade-up"}>
 
-            <span className="tag">Big data analysis</span>
+            <span className="tag">{ post.tagData }</span>
             <div className="block-inner">
                 <div className="ml" dangerouslySetInnerHTML={{__html: post.mlContent.html }}></div>
                 </div>
@@ -159,7 +143,7 @@ const PostPreview = ({post, noImage}) => {
             <section className="section-block section-block--contact" id="contact" data-aos={"fade-up"}>
                 <div className="contact-block">
                 <div className="contact-heading" dangerouslySetInnerHTML={{__html: post.contactUsHeading.html }}></div>
-                <a href="mailto:test@gmail.com" className="button">Send Message</a>
+                <a href="mailto:info@miphic.co" className="button">Send Message</a>
                 </div>
             </section>
             </FadeIn>

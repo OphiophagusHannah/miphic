@@ -22,6 +22,12 @@ export default class GraphCMSContent {
           heroBody
           statementSubheading
           statement
+          tagMission 
+          tagOffer
+          tagImportance
+          tagApproach
+          tagBenefits
+          tagData
           offerHeading {
             raw
             html
