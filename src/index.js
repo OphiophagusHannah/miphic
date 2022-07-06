@@ -8,7 +8,7 @@ import { ApolloProvider } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
 
 const client = new ApolloClient({
-  uri: "https://api-us-east-1.graphcms.com/v2/cl4qn8mei3zxx01yw7t2u98y4/master"
+  uri: "https://api-eu-west-2.graphcms.com/v2/cl5a6478t6dgl01uk9bzz54km/master"
 });
 
 
