@@ -26,44 +26,28 @@ body * {
 }
 
 .arrow-button {
+  position: relative;
   display: block;
-  height: 5rem;
-  width: 5rem;
   border: 2px solid #dde6ee;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
 }
 
-.arrow-button ul {
-  list-style: none;
-  height: 5rem;
-  width: 5rem;
-  padding-left: 0;
-}
-
-.arrow-button ul li {
-  width: 24px;
-  height: 4px;
-  background: #dde6ee;
-}
-
-.arrow-button ul li:nth-child(1) {
-  margin-top: 2.5rem;
-  margin-left: .9rem;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  border-radius: 5px 0 0 5px;
-}
-
-.arrow-button ul li:nth-child(2) {
-  margin-left: 2.2rem;
-  margin-top: -5px;
-  border-radius: 0 5px 5px 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.arrow-button:hover {
-  opacity: 1;
+.arrow-button:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -11px;
+  margin-top: -15px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
 }
 
 .arrow-wrapper {
@@ -935,8 +919,12 @@ h3.text-statement {
   .hero-inner {
     margin-bottom: 3rem;
   }
-  .section-hero {
-    padding-top: 10rem !important;
+  .arrow-wrapper {
+    margin-bottom: 0;
+  }
+  .arrow-button {
+    width: 4rem;
+    height: 4rem;
   }
   .line,
   .section-subblock {

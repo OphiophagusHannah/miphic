@@ -26,10 +26,6 @@ const PostPreview = ({post, noImage}) => {
                 <div className="arrow-wrapper">
                     <AnchorLink href="#our-mission" className="button">
                         <span className="arrow-button">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                            </ul>
                         </span>
                         </AnchorLink>
                 </div>
