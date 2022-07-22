@@ -23,9 +23,19 @@ const PostPreview = ({post, noImage}) => {
                     <h1>{ post.heroTitle }</h1>
                     <h3>{ post.heroBody }</h3>
                 </div>
+                <div className="arrow-wrapper">
+                    <AnchorLink href="#our-mission" className="button">
+                        <span className="arrow-button">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </span>
+                        </AnchorLink>
+                </div>
             </section>
 
-            <section className="section-block" id="our-mission" data-aos={"fade-up"}>
+            <section className="section-block section-mission" id="our-mission" data-aos={"fade-up"}>
                 <div className="block-inner-wrapper">
                     <span className="tag">{ post.tagMission }</span>
                     <div className="block-inner">    

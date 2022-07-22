@@ -64,7 +64,7 @@ function Nav() {
                     display: none;
                     z-index: 6;
                 } 
-                @media (max-width: 767px){
+                @media (max-width: 800px){
                   
                     .hamburger{
                         display: initial;

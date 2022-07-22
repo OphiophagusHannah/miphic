@@ -15,6 +15,10 @@ body *{
   margin-right: auto;
 }
 
+.section-mission {
+  padding-top: 10rem;
+}
+
 .section-subblock {
   margin-bottom: 10rem;
 }
@@ -23,8 +27,75 @@ body *{
   min-height: 100vh;
 }
 
+.arrow-button {
+  display: block;
+  height: 5rem;
+  width: 5rem;
+  border: 2px solid #dde6ee;
+  border-radius: 50%;
+
+  // width: 38px;
+  // height: 14px;
+  // margin: auto;
+  // text-transform: uppercase;
+  // letter-spacing: 3px;
+  // text-align: center;
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // bottom: 20px;
+  // opacity: 0.5;
+  // transition: (ease 1s);
+  // animation: bouncey 1.6s linear infinite;
+  //:border 1px solid gold
+  ul {
+    list-style: none;
+    height: 5rem;
+    width: 5rem;
+    padding-left: 0;
+    li {
+      width: 24px;
+      height: 4px;
+      background: #dde6ee;
+      &:nth-child(1) {
+        // left: 0;
+        // top: 0;
+        // position: absolute;
+        margin-top: 2.5rem;
+        margin-left: .9rem;
+        transform: (rotate(45deg));
+        border-radius: (5px 0 0 5px);
+      }
+      &:nth-child(2){
+        // left: 14px;
+        // position: absolute;
+        margin-left: 2.2rem;
+        margin-top: -5px;
+        border-radius: (0 5px 5px 0);
+        // top: 0;
+        transform: (rotate(-45deg));
+      }
+    }
+  }
+  &:hover{
+    opacity: 1;
+  }
+ 
+}
+
+.arrow-wrapper {
+  width: 10%;
+  margin-bottom: 15rem;
+  a {
+    display: block;
+  }
+}
+
+.hero-inner {
+  margin-bottom: 15rem;
+}
+
 .section-block {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +109,12 @@ body *{
   }
 }
 
+@media only screen and (max-width: 1500px) {
+  .section-block {
+    min-height: 100vh;
+  }
+}
+
 .main-wrapper {
   width: 100%;
   // margin-left: 20%;
@@ -47,6 +124,7 @@ body *{
   display: flex;
   flex-direction: column;
 }
+
 
 .wrapper {
   width: 100%;
@@ -107,7 +185,8 @@ body *{
 }
 
 .navigation-wrapper {
-  padding-left: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -218,8 +297,10 @@ body *{
 .section-hero {
   height: 80vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
   
   h1 {
     font-size: 9rem;
@@ -767,7 +848,7 @@ h3.text-statement {
 
 //@at-root
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
 
   h1 {
     font-size: 70px !important;
@@ -804,6 +885,14 @@ h3.text-statement {
   .hero-inner {
     width: 100%!important;
 
+  }
+
+  .section-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-inner {
+    margin-bottom: 3rem;
   }
 
   .section-hero {
