@@ -33,10 +33,10 @@ const PostPreview = ({post, noImage}) => {
                         <h2 className="mission-statement">{ post.statement }</h2>
                     </div>
                 </div>
-            </section>
+            {/* </section>
 
-            <section className="section-subblock important-section" data-aos={"fade-up"}>
-                <div className="block-inner">
+            <section className="section-subblock important-section" data-aos={"fade-up"}> */}
+                <div className="block-inner important-section">
                     <span className="">{ post.tagImportance }</span>
                     <div className="important-heading" dangerouslySetInnerHTML={{__html: post.offerHeading.html }}> 
                     </div>
@@ -132,9 +132,11 @@ const PostPreview = ({post, noImage}) => {
             </section>
 
             <section className="section-block ml-block" id="data" data-aos={"fade-up"}>
-                <span className="tag">{ post.tagData }</span>
-                <div className="block-inner">
-                    <div className="ml" dangerouslySetInnerHTML={{__html: post.mlContent.html }}></div>
+                <div className="block-inner-wrapper ">
+                    <span className="tag">{ post.tagData }</span>
+                    <div className="block-inner">
+                        <div className="ml" dangerouslySetInnerHTML={{__html: post.mlContent.html }}></div>
+                    </div>
                 </div>
             </section>
 

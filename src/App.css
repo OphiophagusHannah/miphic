@@ -288,6 +288,7 @@ h3.text-statement {
 .important-section {
   font-size: 18px;
   font-weight: 300;
+  padding-top: 5rem;
 }
 
 .important-section span {
@@ -823,7 +824,7 @@ h3.text-statement {
 
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 102px !important;
+    font-size: 70px !important;
     margin-left: -6px !important;
   }
   h2.mission-statement {

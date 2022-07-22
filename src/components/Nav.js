@@ -28,9 +28,9 @@ function Nav() {
                 <div className="navigation">
                     <AnchorLink href="#our-mission" className="nav-link" onClick={toggleHamburger}><li>our mission</li></AnchorLink>
                     <AnchorLink href="#what-we-offer" className="nav-link" onClick={toggleHamburger}><li>what we offer</li></AnchorLink>
-                    <AnchorLink href="#how-it-works" className="nav-link" onClick={toggleHamburger}><li>our approach</li></AnchorLink>
+                    <AnchorLink href="#how-it-works" className="nav-link" onClick={toggleHamburger}><li>technology</li></AnchorLink>
                     <AnchorLink href="#advantages" className="nav-link" onClick={toggleHamburger}><li>platform benefits</li></AnchorLink>
-                    <AnchorLink href="#data" className="nav-link" onClick={toggleHamburger}><li>big data analysis</li></AnchorLink>
+                    <AnchorLink href="#data" className="nav-link" onClick={toggleHamburger}><li>machine learning</li></AnchorLink>
                     <a href="mailto:info@miphic.co" className="nav-link nav-link--end"><li>get in touch</li></a>
                 </div>
  
