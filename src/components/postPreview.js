@@ -131,12 +131,10 @@ const PostPreview = ({post, noImage}) => {
                 </div>
             </section>
 
-
             <section className="section-block ml-block" id="data" data-aos={"fade-up"}>
-
-            <span className="tag">{ post.tagData }</span>
-            <div className="block-inner">
-                <div className="ml" dangerouslySetInnerHTML={{__html: post.mlContent.html }}></div>
+                <span className="tag">{ post.tagData }</span>
+                <div className="block-inner">
+                    <div className="ml" dangerouslySetInnerHTML={{__html: post.mlContent.html }}></div>
                 </div>
             </section>
 
