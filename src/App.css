@@ -56,7 +56,12 @@ body * {
 }
 
 .arrow-wrapper a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .hero-inner {
@@ -921,6 +926,9 @@ h3.text-statement {
   }
   .arrow-wrapper {
     margin-bottom: 0;
+  }
+  .arrow-wrapper a {
+    display: block;
   }
   .arrow-button {
     width: 4rem;

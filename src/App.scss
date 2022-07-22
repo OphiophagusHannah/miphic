@@ -58,7 +58,8 @@ body *{
   width: 10%;
   margin-bottom: 15rem;
   a {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -864,6 +865,9 @@ h3.text-statement {
 
   .arrow-wrapper {
     margin-bottom: 0;
+    a {
+      display: block;
+    }
   }
 
   .arrow-button {
