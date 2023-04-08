@@ -939,18 +939,27 @@ h3.text-statement {
   .tag {
     padding-top: 5rem;
   }
-  .columns-wrapper,
-  .block-inner-wrapper,
   .navigation-wrapper {
     -webkit-box-align: center !important;
         -ms-flex-align: center !important;
             align-items: center !important;
     -ms-flex-wrap: wrap !important;
         flex-wrap: wrap !important;
+    padding: 1rem 1rem !important;
+  }
+  .columns-wrapper,
+  .block-inner-wrapper {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+    padding: 0 !important;
   }
   .section-hero,
   .section-block {
     height: auto !important;
+    padding: 1rem 1rem !important;
   }
   h3,
   h4,
@@ -1006,7 +1015,7 @@ h3.text-statement {
   }
   .contact-heading {
     padding-top: 5rem !important;
-    padding-bottom: 5rem !important;
+    padding-bottom: 3rem !important;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -1038,6 +1047,12 @@ h3.text-statement {
   }
   .nav-wrapper a {
     text-transform: uppercase !important;
+  }
+  .contact-block h4 {
+    margin-top: 2rem;
+  }
+  .contact-block a {
+    padding: 2rem 3rem;
   }
 }
 /*# sourceMappingURL=App.css.map */

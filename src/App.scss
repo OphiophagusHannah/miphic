@@ -885,16 +885,24 @@ h3.text-statement {
     padding-top: 5rem;
   }
 
-  .columns-wrapper,
-  .block-inner-wrapper,
   .navigation-wrapper {
     align-items: center !important;
     flex-wrap: wrap !important;
+    padding: 1rem 1rem !important;
+
+  }
+
+  .columns-wrapper,
+  .block-inner-wrapper {
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    padding: 0!important;
   }
 
   .section-hero,
   .section-block {
     height: auto!important;
+    padding: 1rem 1rem !important;
   }
 
   h3,
@@ -946,8 +954,7 @@ h3.text-statement {
   .right-column,
   .left-column {
     padding-right: 0 !important;
-    width:
-     100%!important;
+    width: 100%!important;
   }
 
   .left-column {
@@ -960,8 +967,7 @@ h3.text-statement {
 
   .contact-heading {
     padding-top: 5rem !important;
-
-    padding-bottom: 5rem !important;
+    padding-bottom: 3rem !important;
     display: flex !important;
      flex-direction: column !important;
      align-items: center !important;
@@ -973,8 +979,6 @@ h3.text-statement {
   }
 
   .right-column {
-
-
     svg {
       width: 100% !important;
     }
@@ -988,7 +992,6 @@ h3.text-statement {
       font-size: 16px !important;
       text-align: center !important;
     }
-
   }
 
   .left-column {
@@ -1000,4 +1003,15 @@ h3.text-statement {
   .nav-wrapper a {
     text-transform: uppercase !important;
   }
+
+  .contact-block {
+    h4 {
+      margin-top: 2rem;
+    }
+  }
+
+  .contact-block a {
+    padding: 2rem 3rem;
+  }
+
 }
