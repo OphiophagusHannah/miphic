@@ -1,5 +1,5 @@
 import {React, useState} from 'react';
-import { RichText } from '@graphcms/rich-text-react-renderer';
+// import { RichText } from '@graphcms/rich-text-react-renderer';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import FadeIn from 'react-fade-in';
 
@@ -19,7 +19,7 @@ const PostPreview = ({post, noImage}) => {
         <div className="post-preview">
             <FadeIn>
             <section className="section-hero" data-aos={"fade-up"} >
-                <div className="hero-inner">                
+                <div className="hero-inner">
                     <h1>{ post.heroTitle }</h1>
                     <h3>{ post.heroBody }</h3>
                 </div>
@@ -30,11 +30,13 @@ const PostPreview = ({post, noImage}) => {
                         </AnchorLink>
                 </div>
             </section>
+            </FadeIn>
 
+            <FadeIn>
             <section className="section-block section-mission" id="our-mission" data-aos={"fade-up"}>
                 <div className="block-inner-wrapper">
                     <span className="tag">{ post.tagMission }</span>
-                    <div className="block-inner">    
+                    <div className="block-inner">
                         <h3 className="text-statement">{ post.statementSubheading }</h3>
                         <h2 className="mission-statement">{ post.statement }</h2>
                     </div>
@@ -43,11 +45,12 @@ const PostPreview = ({post, noImage}) => {
 
             <section className="section-subblock important-section" data-aos={"fade-up"}> */}
                 <div className="block-inner important-section">
-                    <span className="">{ post.tagImportance }</span>
-                    <div className="important-heading" dangerouslySetInnerHTML={{__html: post.offerHeading.html }}> 
+                    <span className="tag">{ post.tagImportance }</span>
+                    <div className="important-heading" dangerouslySetInnerHTML={{__html: post.offerHeading.html }}>
                     </div>
                 </div>
             </section>
+            </FadeIn>
 
             <section className="section-block section-services" id="what-we-offer" data-aos={"fade-up"}>
                 <span className="tag">{ post.tagOffer }</span>
@@ -67,13 +70,19 @@ const PostPreview = ({post, noImage}) => {
                         <div dangerouslySetInnerHTML={{__html: post.offerColumnThird.html }}></div>
                     </div>
 
+
+
                 </div>
                 <div className="additional-services" data-aos={"fade-up"}>
-                    <div className="line">
+                <div className="line">
+                    {/* <span className="dot">?</span> */}
+                        <h3>Special Request</h3>
                         <h4 dangerouslySetInnerHTML={{__html: post.moreOffers.html }}></h4>
                         <a href={ post.contactEmail } className="button">Send Us Message</a>
                     </div>
                     <div className="line">
+                    {/* <span className="dot">L</span> */}
+                        <h3>Additional Services</h3>
                         <h4  dangerouslySetInnerHTML={{__html: post.bigDataColumn.html }}></h4>
                         <AnchorLink href="#data" className="button">big data analysis</AnchorLink>
                     </div>
@@ -84,7 +93,7 @@ const PostPreview = ({post, noImage}) => {
                 <div className="block-inner-wrapper block-inner-wrapper--top">
                     <div className="left-column">
                         <span className="tag">{ post.tagApproach }</span>
-                        <h3 dangerouslySetInnerHTML={{__html: post.technologyHeading.html }}></h3>
+                        <div dangerouslySetInnerHTML={{__html: post.technologyHeading.html }}></div>
                     </div>
                     <div className="right-column" >
                         <div className={isActive ? 'image-after' : 'image-before'}>
@@ -152,7 +161,7 @@ const PostPreview = ({post, noImage}) => {
                 <a href={ post.contactEmail } className="button">Send Message</a>
                 </div>
             </section>
-            </FadeIn>
+
         </div>
     );
 };

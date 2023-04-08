@@ -28,9 +28,10 @@ body * {
 .arrow-button {
   position: relative;
   display: block;
-  border: 2px solid #dde6ee;
-  width: 5rem;
-  height: 5rem;
+  border: 3px solid #dde6ee;
+  opacity: .5;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
 }
 
@@ -38,21 +39,33 @@ body * {
   position: absolute;
   display: inline-block;
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   top: 50%;
   left: 50%;
-  margin-left: -11px;
-  margin-top: -15px;
+  margin-left: -8px;
+  margin-top: -12px;
   border-bottom: 2px solid;
   border-right: 2px solid;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
 
+.arrow-button:hover {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.arrow-button:hover:after {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
 .arrow-wrapper {
   width: 10%;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 }
 
 .arrow-wrapper a {
@@ -65,7 +78,7 @@ body * {
 }
 
 .hero-inner {
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 }
 
 .section-block {
@@ -86,13 +99,7 @@ body * {
 }
 
 .section-block--contact {
-  height: 100vh;
-}
-
-@media only screen and (max-width: 1500px) {
-  .section-block {
-    min-height: 100vh;
-  }
+  min-height: 60vh;
 }
 
 .main-wrapper {
@@ -160,13 +167,13 @@ body * {
 }
 
 .logo {
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .logo svg {
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .logo svg path {
@@ -196,9 +203,9 @@ body * {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  padding-bottom: 5rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#020024), color-stop(85%, rgba(2, 0, 36, 0)));
-  background: linear-gradient(180deg, #020024 0%, rgba(2, 0, 36, 0) 85%);
+  padding-bottom: 3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#020024), color-stop(70%, rgba(2, 0, 36, 0)));
+  background: linear-gradient(180deg, #020024 0%, rgba(2, 0, 36, 0) 70%);
   z-index: 30;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,13 +242,13 @@ body * {
 }
 
 .nav-wrapper .nav-link--end li {
-  padding: 1rem 1.5rem;
+  padding: .5rem 1rem;
   cursor: pointer;
   border: 2px solid;
   border-image-slice: 1;
   border-width: 2px;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   border-image-source: linear-gradient(45deg, #12b8ff, #96ff94);
   background: -webkit-linear-gradient(0deg, #12b8ff, #96ff94);
@@ -279,6 +286,43 @@ body * {
     margin-left: auto !important;
     margin-right: auto !important;
   }
+}
+
+.post-preview ul {
+  padding-left: 0;
+}
+
+.post-preview ul li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 20px;
+  line-height: 1.3;
+  margin-top: .5rem;
+}
+
+.post-preview ul li div {
+  font-size: 20px;
+}
+
+.post-preview ul li::before {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.3rem;
+  width: 0.3rem;
+  min-height: 0.3rem;
+  min-width: 0.3rem;
+  border: 2px solid #12b8ff;
+  margin-left: -1.5rem;
+  margin-top: .5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
 }
 
 .section-hero {
@@ -348,10 +392,10 @@ h3.text-statement {
 }
 
 .important-section span {
+  font-size: 22px;
   display: block;
-  font-size: 16px;
-  margin-bottom: 1.5rem;
   text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 
 .important-section h3 {
@@ -416,7 +460,7 @@ h3.text-statement {
 }
 
 .section-offer .line p {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .section-offer .special-request {
@@ -468,6 +512,11 @@ h3.text-statement {
   margin-left: 3rem;
 }
 
+.section-advantages .column p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
 .section-advantages .column span {
   font-family: 'Poiret One', sans-serif;
   font-weight: 300;
@@ -508,9 +557,9 @@ h3.text-statement {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .section-services .dot {
@@ -536,9 +585,9 @@ h3.text-statement {
 }
 
 .section-services .line {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   margin-top: 2rem;
-  width: 30%;
+  width: 33%;
   padding-top: 1.5rem;
 }
 
@@ -550,10 +599,11 @@ h3.text-statement {
 
 .section-services .line ul {
   padding-left: 1.5rem;
+  padding-right: 5rem;
 }
 
 .section-services .line p, .section-services .line li {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   padding-bottom: .5rem;
 }
@@ -579,15 +629,14 @@ h3.text-statement {
 }
 
 .section-services .additional-services .line {
-  width: 30%;
-  padding-right: 5%;
+  width: 33%;
   margin-top: 0;
 }
 
 .section-services .additional-services .line h4 p {
   font-size: 20px;
   width: 100%;
-  line-height: 1.1;
+  line-height: 1.4;
 }
 
 .section-services .additional-services .line .button {
@@ -602,7 +651,7 @@ h3.text-statement {
 
 .left-column h3 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 300;
   margin-top: 2rem;
   background: -webkit-linear-gradient(0deg, #12b8ff, #96ff94);
   -webkit-background-clip: text;
@@ -793,7 +842,7 @@ h3.text-statement {
 }
 
 .ml-block p, .ml-block li {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   padding-bottom: 1rem;
 }
@@ -807,8 +856,6 @@ h3.text-statement {
 
 .contact-block {
   border-top: 1px solid #a5c4e4;
-  margin-top: 12rem;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -822,9 +869,11 @@ h3.text-statement {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 7rem;
 }
 
 .contact-block div {
+  padding-top: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -854,6 +903,7 @@ h3.text-statement {
 
 .contact-block a {
   padding: 3rem 4rem;
+  margin: auto;
   cursor: pointer;
   border: 10px solid;
   border-image-slice: 1;

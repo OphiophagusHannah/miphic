@@ -16,7 +16,7 @@ function Nav() {
 
             <ul className="navigation-wrapper">
                 <a href="/" className="nav-link">
-                    <li>            
+                    <li>
                         <div className="logo">
                             <svg width="564" height="564" viewBox="0 0 564 564" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M149.836 397.99C149.836 265.403 149.836 302.423 149.836 217.087C149.836 131.75 250.993 133.867 250.993 217.087C250.993 300.306 250.993 334.163 250.993 375.069C250.993 415.974 319.429 416.325 319.429 375.069C319.429 333.812 319.429 299.073 319.429 217.087C319.429 135.1 420.762 131.75 420.762 217.087C420.762 302.423 420.762 397.99 420.762 397.99M283.231 20C124.546 20 22.7793 141.004 20.0463 281.471C17.2629 424.525 140.464 544.333 283.231 543.999C425.651 543.666 546.731 424.177 543.953 281.471C541.226 141.359 435.935 20 283.231 20Z" />
@@ -33,21 +33,21 @@ function Nav() {
                     <AnchorLink href="#data" className="nav-link" onClick={toggleHamburger}><li>machine learning</li></AnchorLink>
                     <a href="mailto:info@miphic.co" className="nav-link nav-link--end"><li>get in touch</li></a>
                 </div>
- 
+
                 <div className="hamburger" onClick={toggleHamburger}>
                     <Hamburger isOpen={hamburgerOpen}/>
                 </div>
             </ul>
 
-  
+
             <style jsx>{`
                 .navigation{
                     width: 100%;
                     display: flex;
                     align-items: center;
                 }
-                
-                
+
+
                 .navigation {
                     display:flex;
                     flex-wrap: wrap;
@@ -63,17 +63,17 @@ function Nav() {
                 .hamburger{
                     display: none;
                     z-index: 6;
-                } 
+                }
                 @media (max-width: 800px){
-                  
+
                     .hamburger{
                         display: initial;
                         padding-top: 10px;
                         margin-left: 10px;
                         z-index: 6;
                     }
-                
-                   
+
+
                     .navigation {
                         left:  ${hamburgerOpen ? '0' : '-100vw'};
                         display: flex;
@@ -88,7 +88,7 @@ function Nav() {
                         transition: .3s linear;
                     }
 
-                    
+
                     .navigation li {
                         color: white;
                     }
@@ -102,9 +102,9 @@ function Nav() {
                         margin-top: 2rem !important;
                     }
                 }
-                
-               
-                
+
+
+
             `}</style>
         </nav>
 

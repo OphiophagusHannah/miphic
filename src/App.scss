@@ -29,34 +29,47 @@ body *{
 
 
 .arrow-button {
-
     // position: absolute;
     position: relative;
     display: block;
-    border: 2px solid #dde6ee;
-    width: 5rem;
-    height: 5rem;
+    border: 3px solid #dde6ee;
+    opacity: .5;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
 
     &:after {
       position: absolute;
       display: inline-block;
       content: "";
-      width: 20px;
-      height: 20px ;
+      width: 15px;
+      height: 15px ;
       top: 50%;
       left: 50%;
-      margin-left: -11px;;
-      margin-top: -15px;
+      margin-left: -8px;
+      margin-top: -12px;
       border-bottom: 2px solid;
       border-right: 2px solid;
       transform: rotateZ(45deg);
   }
+  &:hover {
+    // border-color: rgb(18, 184, 255);
+    opacity: 1;
+    transition: .3s ease-in-out;
+
+    &:after {
+      opacity: 1;
+      // border-color: rgb(18, 184, 255);
+      transition: .3s ease-in-out;
+    }
+  }
 }
+
+
 
 .arrow-wrapper {
   width: 10%;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
   a {
     display: flex;
     justify-content: flex-end;
@@ -64,7 +77,7 @@ body *{
 }
 
 .hero-inner {
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 }
 
 .section-block {
@@ -77,14 +90,14 @@ body *{
   }
 
   &--contact {
-    height: 100vh;
+    min-height: 60vh;
   }
 }
 
 @media only screen and (max-width: 1500px) {
-  .section-block {
-    min-height: 100vh;
-  }
+  // .section-block {
+  //   min-height: 100vh;
+  // }
 }
 
 .main-wrapper {
@@ -140,14 +153,14 @@ body *{
 
 
 
-// Nav 
+// Nav
 
 .logo {
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
   svg {
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
 
     path {
       stroke-width: 30;
@@ -173,8 +186,8 @@ body *{
 .nav-wrapper {
   position: sticky;
   top: 0;
-  padding-bottom: 5rem;
-  background: linear-gradient(180deg, #020024 0%, rgba(2,0,36,0) 85%);
+  padding-bottom: 3rem;
+  background: linear-gradient(180deg, #020024 0%, rgba(2, 0, 36, 0) 70%);
   z-index: 30;
   display: flex;
   align-items: center;
@@ -207,20 +220,20 @@ body *{
       margin-right: 0;
 
       li {
-        padding: 1rem 1.5rem;
+        padding: .5rem 1rem;
         cursor: pointer;
         border: 2px solid;
         border-image-slice: 1;
         border-width: 2px;
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: 16px;
         text-decoration: none;
         border-image-source: linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
         background: -webkit-linear-gradient(0deg, rgb(18, 184, 255), rgb(150, 255, 148));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: 2s ease-in-out;
-      
+
         &:hover {
           background:  linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
           color: rgb(66, 31, 172);
@@ -228,7 +241,7 @@ body *{
           -webkit-text-fill-color: rgb(47, 19, 131);
           transition: 2s ease-in-out;
         }
-      } 
+      }
     }
   }
 }
@@ -261,10 +274,41 @@ body *{
 
 
 
+.post-preview ul {
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-top: .5rem;
+
+    div {
+      font-size: 20px;
+    }
+
+    &::before {
+      content: '';
+      display: flex;
+      height: 0.3rem;
+      width: 0.3rem;
+      min-height: 0.3rem;
+      min-width: 0.3rem;
+      border: 2px solid #12b8ff;
+      margin-left: -1.5rem;
+      margin-top: .5rem;
+      margin-right: 1rem;
+      border-radius: 50%;
+    }
+  }
+}
 
 
 
-// Hero 
+
+// Hero
 
 .section-hero {
   height: 80vh;
@@ -273,7 +317,7 @@ body *{
   justify-content: space-between;
   align-items: flex-end;
 
-  
+
   h1 {
     font-size: 9rem;
     margin-top: 0;
@@ -325,10 +369,10 @@ h3.text-statement {
   padding-top: 5rem;
 
   span {
+    font-size: 22px;
     display: block;
-    font-size: 16px;
-    margin-bottom: 1.5rem;
     text-transform: uppercase;
+    margin-bottom: 1.5rem;
     // opacity: .6;
   }
 
@@ -383,6 +427,7 @@ h3.text-statement {
   .line {
     margin-bottom: 3rem;
     width: 30%;
+    // padding-right: 3%;
 
     h3 {
       font-size: 32px;
@@ -391,7 +436,7 @@ h3.text-statement {
     }
 
     p {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 
@@ -436,6 +481,11 @@ h3.text-statement {
     width: 48%;
     & > div {
       margin-left: 3rem;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.4;
     }
 
     span {
@@ -484,7 +534,7 @@ h3.text-statement {
   .columns-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .dot {
@@ -504,11 +554,12 @@ h3.text-statement {
   }
 
   .line {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     margin-top: 2rem;
-    width: 30%;
+    width: 33%;
+    // padding-right: 4%;
     padding-top: 1.5rem;
-    
+
     h3 {
       font-size: 30px;
       margin-bottom: 1.5rem;
@@ -517,10 +568,12 @@ h3.text-statement {
 
     ul {
       padding-left: 1.5rem;
+      padding-right: 5rem;
+
     }
 
     p, li {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 300;
       padding-bottom: .5rem;
     }
@@ -542,18 +595,15 @@ h3.text-statement {
     margin-top: 3rem;
     margin-bottom: 20rem;
     display: flex;
-    // justify-content: space-between;
-    // flex-direction: column;
 
     .line {
-      width: 30%;
-      padding-right: 5%;
+      width: 33%;
       margin-top: 0;
 
       h4 p {
         font-size: 20px;
         width: 100%;
-        line-height: 1.1;
+        line-height: 1.4;
       }
 
       .button {
@@ -572,7 +622,7 @@ h3.text-statement {
 
   h3 {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 2rem;
     background: -webkit-linear-gradient(0deg, rgb(18, 184, 255), rgb(150, 255, 148));
     -webkit-background-clip: text;
@@ -614,7 +664,7 @@ h3.text-statement {
       justify-content: center;
       cursor: pointer;
       transition: .3s ease-in-out;
-  
+
       h4 {
         margin-top: 1.5rem;
         padding: 1.5rem 2rem;
@@ -623,12 +673,12 @@ h3.text-statement {
         text-decoration: none;
         opacity: .6;
         border-bottom: 2px solid transparent;
-  
+
         &:hover {
           opacity: 1;
           transition: .3s ease-in-out;
         }
-  
+
         &.toggle-button-before {
           background: -webkit-linear-gradient(0deg, rgb(18, 184, 255), rgb(150, 255, 148));
           -webkit-background-clip: text;
@@ -673,7 +723,7 @@ h3.text-statement {
       justify-content: center;
       cursor: pointer;
       transition: .3s ease-in-out;
-  
+
       h4 {
         margin-top: 1.5rem;
         padding: 1.5rem 2rem;
@@ -682,12 +732,12 @@ h3.text-statement {
         text-decoration: none;
         opacity: .6;
         border-bottom: 2px solid transparent;
-  
+
         &:hover {
           opacity: 1;
           transition: .3s ease-in-out;
         }
-  
+
         &.toggle-button-after {
           background: -webkit-linear-gradient(0deg, #12b8ff, #96ff94);
           -webkit-background-clip: text;
@@ -697,7 +747,7 @@ h3.text-statement {
           cursor: default;
           &:hover {
             border-bottom: none;
-      
+
           }
         }
       }
@@ -706,7 +756,7 @@ h3.text-statement {
 }
 
 
-// Machine Learning 
+// Machine Learning
 
 .ml-block {
 
@@ -740,10 +790,10 @@ h3.text-statement {
   }
 
   p, li {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     padding-bottom: 1rem;
-   
+
     // width: 50%;
   }
 
@@ -761,20 +811,23 @@ h3.text-statement {
 
 .contact-block {
   border-top: 1px solid rgb(165, 196, 228);
-  margin-top: 12rem;
-  height: 100%;
+  // margin-top: 12rem;
+  // height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 7rem;
 
   div {
+    padding-top: 7rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  
+
 
   h3 {
     text-transform: capitalize;
@@ -791,6 +844,7 @@ h3.text-statement {
 
   a {
     padding: 3rem 4rem;
+    margin: auto;
     cursor: pointer;
     border: 10px solid;
     border-image-slice: 1;
@@ -803,7 +857,7 @@ h3.text-statement {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 2s ease-in-out;
-  
+
     &:hover {
       background:  linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
       color: rgb(66, 31, 172);
@@ -844,8 +898,8 @@ h3.text-statement {
   }
 
   h3,
-  h4, 
-  ul, 
+  h4,
+  ul,
   .column,
   .line,
   .offer-heading,
@@ -920,7 +974,7 @@ h3.text-statement {
 
   .right-column {
 
-  
+
     svg {
       width: 100% !important;
     }
@@ -934,7 +988,7 @@ h3.text-statement {
       font-size: 16px !important;
       text-align: center !important;
     }
-    
+
   }
 
   .left-column {
