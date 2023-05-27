@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Query } from 'react-apollo';
 import PostsPreview from '../components/postPreview';
 import GraphCMSContent from '../services/graphcms';
