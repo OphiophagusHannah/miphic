@@ -9,17 +9,9 @@ const Main = props => {
     const [posts, setPosts] = React.useState([]);
     const Client = new GraphCMSContent();
     const LoadingPostsJsx = () => (
-            <section class="section-hero section-loading" data-aos="fade-up">
-                <div class="hero-inner">
-                    <h1>Miphic</h1>
-                    <h3>High-throughput mitochondrial screening platform</h3>
-                </div>
-                <div class="arrow-wrapper">
-                    <a href="#our-mission" class="button">
-                        <span class="arrow-button"></span>
-                    </a>
-                </div>
-            </section>
+        <div className="section-hero section-loading" >
+            <div>{posts}</div>
+        </div>
     );
     const ErrorLoadingPostsJsx = () => (
         <div className="mx-auto alert-danger">
