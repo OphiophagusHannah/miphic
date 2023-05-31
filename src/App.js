@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import Main from './components/MainComponent';
 import './App.css';
-import Canvas from './components/Canvas'
-
-
-
 
 class App extends Component {
 
