@@ -4,7 +4,6 @@ import PostsPreview from '../components/postPreview';
 import GraphCMSContent from '../services/graphcms';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import ProgressBar from "react-scroll-progress-bar";
 
 const Main = props => {
     const [posts, setPosts] = React.useState([]);
@@ -22,7 +21,6 @@ const Main = props => {
     return (
         <>
             <div className="">
-                {/* <ProgressBar height="6" bgcolor="cyan" duration="1" /> */}
                 <Nav/>
                 <div className="">
                     <Query query={Client.fetchPosts()}>
