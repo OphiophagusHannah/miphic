@@ -69,7 +69,7 @@ body *{
 
 .arrow-wrapper {
   width: 10%;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   a {
     display: flex;
     justify-content: flex-end;
@@ -77,7 +77,7 @@ body *{
 }
 
 .hero-inner {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .section-block {
@@ -115,7 +115,7 @@ body *{
   width: 100%;
   scroll-behavior: smooth;
   background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgb(47, 19, 131) 100%);
+  background: linear-gradient(180deg, #020024 0%, rgb(47, 19, 131) 100%);
   position: absolute;
   z-index: 12;
 
@@ -176,21 +176,30 @@ body *{
   display: flex;
   align-items: center;
   width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  transition: .3s linear;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  // padding-bottom: 3rem;
+  // background: linear-gradient(180deg, #020024 0%, rgba(2, 0, 36, 0) 70%);
+  z-index: 30;
+}
+
+.display {
+  position: initial;
 }
 
 .nav-wrapper {
-  position: sticky;
-  top: 0;
-  padding-bottom: 3rem;
-  background: linear-gradient(180deg, #020024 0%, rgba(2, 0, 36, 0) 70%);
-  z-index: 30;
   display: flex;
   align-items: center;
+  transition: background-color .3s linear;
 
   a {
     text-decoration: none;
@@ -204,6 +213,10 @@ body *{
     li {
       list-style-type: none;
       font-size: 18px;
+      @media only screen and (max-width: 768px) {
+        font-size: 24px;
+      }
+      transition: .3s linear;
     }
 
     &:hover {
@@ -214,36 +227,40 @@ body *{
     }
   }
 
-  .nav-link {
-    &--end {
-      margin-left: auto;
-      margin-right: 0;
+  &.bg-dark {
+    .nav-link {
+      &--end {
+        margin-left: auto;
+        margin-right: 0;
 
-      li {
-        padding: .5rem 1rem;
-        cursor: pointer;
-        border: 2px solid;
-        border-image-slice: 1;
-        border-width: 2px;
-        text-transform: uppercase;
-        font-size: 16px;
-        text-decoration: none;
-        border-image-source: linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
-        background: -webkit-linear-gradient(0deg, rgb(18, 184, 255), rgb(150, 255, 148));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: 2s ease-in-out;
+        li {
+          padding: .5rem 1rem;
+          cursor: pointer;
+          border: 2px solid;
+          border-image-slice: 1;
+          border-width: 2px;
+          text-transform: uppercase;
+          font-size: 16px;
+          text-decoration: none;
+          border-image-source: linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
+          background: -webkit-linear-gradient(0deg, rgb(18, 184, 255), rgb(150, 255, 148));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          // transition: .3s ease-in-out;
 
-        &:hover {
-          background:  linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
-          color: rgb(66, 31, 172);
-          -webkit-background-clip: none;
-          -webkit-text-fill-color: rgb(47, 19, 131);
-          transition: 2s ease-in-out;
+          &:hover {
+            background:  linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
+            color: #421fac;
+            -webkit-background-clip: none;
+            -webkit-text-fill-color: rgb(47, 19, 131);
+            // transition: .3s ease-in-out;
+          }
         }
       }
     }
   }
+
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -268,6 +285,60 @@ body *{
     &--end {
       margin-left: auto !important;
       margin-right: auto !important;
+    }
+  }
+}
+
+@media (min-width: 800px){
+  .nav-wrapper.bg-light {
+    background-color: #5effe8;
+    background: linear-gradient(180deg, #5effe8 0%, #5effe8);
+    padding-bottom: 0;
+    transition: background-color .3s linear;
+
+    .navigation-wrapper {
+      padding-top: 0rem;
+      padding-bottom: 0rem;
+      transition: .3s linear;
+    }
+
+    .logo svg path {
+      stroke: #020024;
+    }
+
+    a li {
+      color: #020024;
+      transition: .3s linear;
+    }
+
+    .nav-link--end {
+      margin-left: auto;
+      margin-right: 0;
+
+      li {
+        padding: .5rem 1rem;
+        cursor: pointer;
+        border: 2px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        text-transform: uppercase;
+        font-size: 16px;
+        text-decoration: none;
+        border-image-source: linear-gradient(45deg, #221787, #221787);
+        background: -webkit-linear-gradient(0deg, #221787, #221787);
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: #5effe8;
+        color: #5effe8;
+        // transition: .3s linear;
+
+        &:hover {
+          border-image-source: linear-gradient(45deg, #12b8ff, #12b8ff);
+          background: -webkit-linear-gradient(0deg,#12b8ff, #12b8ff);
+          -webkit-text-fill-color: #221787;
+          color: #221787;
+
+        }
+      }
     }
   }
 }
@@ -340,7 +411,7 @@ body *{
   }
 
   h3 {
-    font-size:35px;
+    font-size: 35px;
     font-weight: 300;
     width: 70%;
   }
@@ -467,6 +538,7 @@ h3.text-statement {
 
 .section-advantages {
   padding-top: 7rem;
+  padding-bottom: 7rem;
   .block-inner-wrapper {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -519,7 +591,7 @@ h3.text-statement {
 
 .section-services {
   .tag {
-    padding-top: 10rem;
+    padding-top: 7rem;
   }
 
   h3.offer-heading {
@@ -593,7 +665,7 @@ h3.text-statement {
   .additional-services {
     border-top: 1px solid rgb(165, 196, 228);
     margin-top: 3rem;
-    margin-bottom: 20rem;
+    margin-bottom: 3rem;
     display: flex;
 
     .line {
@@ -616,8 +688,14 @@ h3.text-statement {
 
 // Technology
 
+
+.technologies-block {
+  padding-top: 9rem;
+}
+
 .left-column {
   width:35%;
+
   padding-right: 5rem;
 
   h3 {
@@ -759,6 +837,8 @@ h3.text-statement {
 // Machine Learning
 
 .ml-block {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 
   .ml {
     padding-left: 3rem;
@@ -820,7 +900,7 @@ h3.text-statement {
   padding-bottom: 7rem;
 
   div {
-    padding-top: 7rem;
+    padding-top: 9rem;
 
     display: flex;
     flex-direction: column;
@@ -1013,5 +1093,29 @@ h3.text-statement {
   .contact-block a {
     padding: 2rem 3rem;
   }
+}
 
+.footer-inner {
+  background: #020024;
+
+
+  .footer-wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+
+    a {
+      text-decoration: none;
+      color: #dde6ee;
+      opacity: .5;
+      &:hover {
+        opacity: 1;
+        color: #12b8ff;
+      }
+    }
+  }
 }

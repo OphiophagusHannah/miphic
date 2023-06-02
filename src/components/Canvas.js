@@ -1,308 +1,122 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useEffect } from 'react'
+import * as THREE from "three";
+import DatGui, { DatBoolean, DatColor, DatNumber, DatString } from 'react-dat-gui';
+
+
 
 const Canvas = props => {
 
-  const canvasRef = useRef(null)
+    class THREEScene {
+        constructor(container = document.body) {
+            this.container = container;
 
-  useEffect(() => {
-
-    let canvas, ctx;
-    let render, init;
-    let blob;
-
-    class Blob {
-      constructor() {
-        this.points = [];
-      }
-
-      init() {
-        for (let i = 0; i < this.numPoints; i++) {
-          let point = new Point(this.divisional * (i + 1), this);
-          // point.acceleration = -1 + Math.random() * 2;
-          this.push(point);
-        }
-      }
-
-      render() {
-        let canvas = this.canvas;
-        let ctx = this.ctx;
-        let position = this.position;
-        let pointsArray = this.points;
-        let radius = this.radius;
-        let points = this.numPoints;
-        let divisional = this.divisional;
-        let center = this.center;
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        pointsArray[0].solveWith(pointsArray[points - 1], pointsArray[1]);
-
-        let p0 = pointsArray[points - 1].position;
-        let p1 = pointsArray[0].position;
-        let _p2 = p1;
-
-        ctx.beginPath();
-        ctx.moveTo(center.x, center.y);
-        ctx.moveTo((p0.x + p1.x) / 2, (p0.y + p1.y) / 2);
-
-        for (let i = 1; i < points; i++) {
-
-          pointsArray[i].solveWith(pointsArray[i - 1], pointsArray[i + 1] || pointsArray[0]);
-
-          let p2 = pointsArray[i].position;
-          var xc = (p1.x + p2.x) / 2;
-          var yc = (p1.y + p2.y) / 2;
-          ctx.quadraticCurveTo(p1.x, p1.y, xc, yc);
-          // ctx.lineTo(p2.x, p2.y);
-
-          ctx.fillStyle = 'rgba(255, 90, 70, 0)';
-          // ctx.fillRect(p1.x-2.5, p1.y-2.5, 5, 5);
-
-          p1 = p2;
+            this.setup();
+            this.camera();
+            this.addObjects();
+            this.eventListeners();
+            this.settings();
+            this.render();
         }
 
-        var xc = (p1.x + _p2.x) / 2;
-        var yc = (p1.y + _p2.y) / 2;
-        ctx.quadraticCurveTo(p1.x, p1.y, xc, yc);
-        // ctx.lineTo(_p2.x, _p2.y);
-
-        // ctx.closePath();
-        ctx.fillStyle = this.color;
-        ctx.fill();
-        ctx.strokeStyle = '#a5c4e4';
-        ctx.stroke();
-
-        /*
-            ctx.fillStyle = '#000000';
-            if(this.mousePos) {
-              let angle = Math.atan2(this.mousePos.y, this.mousePos.x) + Math.PI;
-              ctx.fillRect(center.x + Math.cos(angle) * this.radius, center.y + Math.sin(angle) * this.radius, 5, 5);
-            }
-        */
-        requestAnimationFrame(this.render.bind(this));
-      }
-
-      push(item) {
-        if (item instanceof Point) {
-          this.points.push(item);
-        }
-      }
-
-      set color(value) {
-        this._color = value;
-      }
-      get color() {
-        return this._color || '#a5c4e4';
-      }
-
-      set canvas(value) {
-        if (value instanceof HTMLElement && value.tagName.toLowerCase() === 'canvas') {
-          this._canvas = canvas;
-          this.ctx = this._canvas.getContext('2d');
-        }
-      }
-      get canvas() {
-        return this._canvas;
-      }
-
-      set numPoints(value) {
-        if (value > 2) {
-          this._points = value;
-        }
-      }
-      get numPoints() {
-        return this._points || 50;
-      }
-
-      set radius(value) {
-        if (value > 0) {
-          this._radius = value;
-        }
-      }
-      get radius() {
-        return this._radius || 250;
-      }
-
-      set position(value) {
-        if (typeof value == 'object' && value.x && value.y) {
-          this._position = value;
-        }
-      }
-      get position() {
-        return this._position || { x: 0.5, y: 0.5 };
-      }
-
-      get divisional() {
-        return Math.PI * 2 / this.numPoints;
-      }
-
-      get center() {
-        return { x: this.canvas.width * this.position.x *1.2 , y: this.canvas.height * this.position.y };
-      }
-
-      set running(value) {
-        this._running = value === true;
-      }
-      get running() {
-        return this.running !== false;
-      }}
-
-
-    class Point {
-      constructor(azimuth, parent) {
-        this.parent = parent;
-        this.azimuth = Math.PI - azimuth;
-        this._components = {
-          x: Math.cos(this.azimuth),
-          y: Math.sin(this.azimuth) };
-
-
-        this.acceleration = -0.3 + Math.random() * 0.6;
-      }
-
-      solveWith(leftPoint, rightPoint) {
-        this.acceleration = (-0.3 * this.radialEffect + (leftPoint.radialEffect - this.radialEffect) + (rightPoint.radialEffect - this.radialEffect)) * this.elasticity - this.speed * this.friction;
-      }
-
-      set acceleration(value) {
-        if (typeof value == 'number') {
-          this._acceleration = value;
-          this.speed += this._acceleration ;
-        }
-      }
-      get acceleration() {
-        return this._acceleration || 0;
-      }
-
-      set speed(value) {
-        if (typeof value == 'number') {
-          this._speed = value;
-          this.radialEffect += this._speed * 5;
-        }
-      }
-      get speed() {
-        return this._speed || 0;
-      }
-
-      set radialEffect(value) {
-        if (typeof value == 'number') {
-          this._radialEffect = value;
-        }
-      }
-      get radialEffect() {
-        return this._radialEffect || 5;
-      }
-
-      get position() {
-        return {
-          x: this.parent.center.x + this.components.x * (this.parent.radius + this.radialEffect),
-          y: this.parent.center.y + this.components.y * (this.parent.radius + this.radialEffect) };
-
-      }
-
-      get components() {
-        return this._components;
-      }
-
-      set elasticity(value) {
-        if (typeof value === 'number') {
-          this._elasticity = value;
-        }
-      }
-      get elasticity() {
-        return this._elasticity || 0.001;
-      }
-      set friction(value) {
-        if (typeof value === 'number') {
-          this._friction = value;
-        }
-      }
-      get friction() {
-        return this._friction || 0.0085;
-      }}
-
-
-    blob = new Blob();
-
-    init = function () {
-      canvas = document.createElement('canvas');
-      canvas.setAttribute('touch-action', 'none');
-
-      document.body.appendChild(canvas);
-
-      let resize = function () {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      };
-      window.addEventListener('resize', resize);
-      resize();
-
-      let oldMousePoint = { x: 0, y: 0 };
-      let hover = false;
-      blob.color = 'rgba(255, 90, 70, 0)';
-      let mouseMove = function (e) {
-
-        let pos = blob.center;
-        let diff = { x: e.clientX - pos.x, y: e.clientY - pos.y };
-        let dist = Math.sqrt(diff.x * diff.x + diff.y * diff.y);
-        let angle = null;
-
-
-        blob.mousePos = { x: pos.x - e.clientX, y: pos.y - e.clientY };
-
-        if (dist < blob.radius && hover === false) {
-          let vector = { x: e.clientX - pos.x, y: e.clientY - pos.y };
-          angle = Math.atan2(vector.y, vector.x);
-          hover = true;
-          blob.color = 'rgba(18, 184, 255, 0.5)';
-        } else if (dist > blob.radius && hover === true) {
-          let vector = { x: e.clientX - pos.x, y: e.clientY - pos.y };
-          angle = Math.atan2(vector.y, vector.x);
-          hover = false;
-          blob.color = 'rgba(255, 90, 70, 0)';
+        settings() {
+            this.settings = {
+                blur: 0,
+                speed: 0.5,
+                noiseFreq: 1.0
+            };
 
         }
 
-        if (typeof angle == 'number') {
-
-          let nearestPoint = null;
-          let distanceFromPoint = 100;
-
-          blob.points.forEach(point => {
-            if (Math.abs(angle - point.azimuth) < distanceFromPoint) {
-              // console.log(point.azimuth, angle, distanceFromPoint);
-              nearestPoint = point;
-              distanceFromPoint = Math.abs(angle - point.azimuth);
-            }
-
-          });
-
-          if (nearestPoint) {
-            let strength = { x: oldMousePoint.x - e.clientX, y: oldMousePoint.y - e.clientY };
-            strength = Math.sqrt(strength.x * strength.x + strength.y * strength.y) * 10;
-            if (strength > 100) strength = 100;
-            nearestPoint.acceleration = strength / 100 * (hover ? -1 : 1);
-          }
+        setup() {
+            this.clock = new THREE.Clock();
+            this.mouse = new THREE.Vector2();
+            this.scene = new THREE.Scene();
+            this.renderer = new THREE.WebGLRenderer({
+                antialias: true
+            });
+            this.renderer.setSize(this.viewport.width, this.viewport.height);
+            this.renderer.setPixelRatio = window.devicePixelRatio;
+            this.renderer.setClearColor(0xffffff, 1);
+            this.container.appendChild(this.renderer.domElement);
         }
 
-        oldMousePoint.x = e.clientX;
-        oldMousePoint.y = e.clientY;
-      };
-      // window.addEventListener('mousemove', mouseMove);
-      window.addEventListener('pointermove', mouseMove);
+        camera() {
+            const FOV = 50;
+            const NEAR = 0.001;
+            const FAR = 100;
+            const ASPECT_RATIO = this.viewport.aspectRatio;
 
-      blob.canvas = canvas;
-      blob.init();
-      blob.render();
+            this.camera = new THREE.PerspectiveCamera(FOV, ASPECT_RATIO, NEAR, FAR);
+            this.camera.position.set(0, 0, 20);
+        }
 
-    };
+        lights() {
+            //const ambientLight = new THREE.AmbientLight(0x404040);
+        }
 
+        addObjects() {
+            this.time = 0;
+            this.geometry = new THREE.PlaneBufferGeometry(10, 10, 16, 16);
+            this.material = new THREE.ShaderMaterial({
+                uniforms: {
+                    u_time: { type: "f", value: 0 },
+                    u_resolution: { type: "v4", value: new THREE.Vector4() },
+                    u_aspect: { type: "f", value: this.aspectRatio },
+                    u_noiseFreq: { value: 0 },
+                    blur: { value: 0 },
+                    speed: { value: 0 }
+                },
+                transparent: true,
+                wireframe: false,
+                vertexShader: document.getElementById("vertex").textContent,
+                fragmentShader: document.getElementById("fragment").textContent
+            });
 
-    init();
+            this.mesh = new THREE.Mesh(this.geometry, this.material);
+            this.mesh.position.set(0, 0, 0);
+            this.scene.add(this.mesh);
+        }
 
-  }, [])
+        render() {
+            this.camera.lookAt(this.scene.position);
+            this.renderer.render(this.scene, this.camera);
 
-  return <canvas ref={canvasRef} {...props}/>
+            this.material.uniforms.u_time.value = this.clock.getElapsedTime();
+            this.material.uniforms.blur.value = this.settings.blur;
+            this.material.uniforms.speed.value = this.settings.speed;
+            this.material.uniforms.u_noiseFreq.value = this.settings.noiseFreq;
+
+            requestAnimationFrame(() => {
+                this.render();
+            });
+        }
+
+        eventListeners() {
+            window.addEventListener("resize", this.onWindowResize.bind(this));
+        }
+
+        onWindowResize() {
+            this.camera.aspect = this.viewport.aspectRatio;
+            this.camera.updateProjectionMatrix();
+            this.renderer.setSize(this.viewport.width, this.viewport.height);
+        }
+
+        get viewport() {
+            const width = this.container.clientWidth;
+            const height = this.container.clientHeight;
+            const aspectRatio = width / height;
+
+            this.aspectRatio = aspectRatio;
+
+            return {
+                width,
+                height,
+                aspectRatio
+            };
+        }
+    }
+
+    const scene = new THREEScene();
 }
 
 export default Canvas

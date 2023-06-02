@@ -9,15 +9,13 @@ const PostPreview = ({post, noImage}) => {
     const [isActive, setIsActive] = useState(false);
 
     const handleClick = event => {
-      // 👇️ toggle isActive state on click
       setIsActive(current => !current);
     };
-
-
 
     return (
         <div className="post-preview">
             <FadeIn>
+
             <section className="section-hero" data-aos={"fade-up"} >
                 <div className="hero-inner">
                     <h1>{ post.heroTitle }</h1>
@@ -89,7 +87,7 @@ const PostPreview = ({post, noImage}) => {
                 </div>
             </section>
 
-            <section className="section-block" id="how-it-works" data-aos={"fade-up"}>
+            <section className="section-block technologies-block" id="how-it-works" data-aos={"fade-up"}>
                 <div className="block-inner-wrapper block-inner-wrapper--top">
                     <div className="left-column">
                         <span className="tag">{ post.tagApproach }</span>

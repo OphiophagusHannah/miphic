@@ -20,7 +20,6 @@ const Home = props => {
         <>
             <div className="container p-2 mx-auto row">
                 <div className="col-8">
-                    <h3>Recent Articles</h3>
                     <div className="border p-3">
                         <Query query={Client.fetchPosts()}>
                             {

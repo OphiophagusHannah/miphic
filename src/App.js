@@ -8,7 +8,6 @@ class App extends Component {
     return (
       <div>
           <div className="wrapper">
-          {/* <Canvas /> */}
           <Main />
           </div>
       </div>

@@ -1,5 +1,5 @@
 
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Hamburger from "../components/Hamburger";
 
@@ -10,10 +10,28 @@ function Nav() {
     const toggleHamburger = () =>{
         setHamburgerOpen(!hamburgerOpen)
     }
+
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY >= 300);
+        });
+    }, []);
+
+    const [display, setDisplay] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setDisplay(window.scrollY >= 5300);
+        });
+    }, []);
+
+
+
     return (
 
-        <nav className="nav-wrapper">
-
+        <nav className={display ? "sticky display" : "sticky"} id="bar">
+            <div className={scroll ? "nav-wrapper bg-light" : "nav-wrapper bg-dark"} id="bar">
             <ul className="navigation-wrapper">
                 <a href="/" className="nav-link">
                     <li>
@@ -38,6 +56,7 @@ function Nav() {
                     <Hamburger isOpen={hamburgerOpen}/>
                 </div>
             </ul>
+            </div>
 
 
             <style jsx>{`
@@ -56,11 +75,11 @@ function Nav() {
                     padding: 0px;
                     overflow: hidden;
                 }
-                .navigation li{
+                .navigation li {
                     list-style-type: none;
                     padding-right: 10px;
                 }
-                .hamburger{
+                .hamburger {
                     display: none;
                     z-index: 6;
                 }
@@ -75,9 +94,9 @@ function Nav() {
 
 
                     .navigation {
-                        left:  ${hamburgerOpen ? '0' : '-100vw'};
+                        left:  ${hamburgerOpen ? '0' : '100vw'};
                         display: flex;
-                        background-color: #002266;
+                        background-color: #020024;
                         height: 100vh;
                         width: 100vw;
                         top: 0;
@@ -106,6 +125,7 @@ function Nav() {
 
 
             `}</style>
+
         </nav>
 
     );
