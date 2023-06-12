@@ -3,6 +3,11 @@ body * {
   margin: 0;
   font-family: "Sen", sans-serif;
 }
+@media only screen and (max-width: 800px) {
+  body * {
+    overflow-x: hidden;
+  }
+}
 
 .section-block,
 .section-subblock,
@@ -28,7 +33,7 @@ body * {
 .arrow-button {
   position: relative;
   display: block;
-  border: 3px solid #dde6ee;
+  border: 2px solid #dde6ee;
   opacity: 0.5;
   width: 4rem;
   height: 4rem;
@@ -58,8 +63,12 @@ body * {
 }
 
 .arrow-wrapper {
-  width: 10%;
   margin-bottom: 5rem;
+}
+@media (min-width: 800px) {
+  .arrow-wrapper {
+    width: 10%;
+  }
 }
 .arrow-wrapper a {
   display: flex;
@@ -91,11 +100,22 @@ body * {
   flex-direction: column;
 }
 
+iframe {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin-left: 0;
+  border: 0 !important;
+}
+
 .wrapper {
+  position: absolute;
+  z-index: 100;
+  top: 0;
   width: 100%;
   scroll-behavior: smooth;
-  background: #020024;
-  background: linear-gradient(180deg, #020024 0%, rgb(47, 19, 131) 100%);
+  background: hsl(243, 100%, 7%);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 0.123) 0%, rgb(2, 0, 36) 40%, rgb(47, 19, 131) 100%);
   position: absolute;
   z-index: 12;
 }
@@ -257,6 +277,10 @@ body * {
     color: #020024;
     transition: 0.3s linear;
   }
+  .nav-wrapper.bg-light a:hover li {
+    color: blue;
+    transition: 0.3s linear;
+  }
   .nav-wrapper.bg-light .nav-link--end {
     margin-left: auto;
     margin-right: 0;
@@ -305,10 +329,14 @@ body * {
   min-height: 0.3rem;
   min-width: 0.3rem;
   border: 2px solid #12b8ff;
-  margin-left: -1.5rem;
   margin-top: 0.5rem;
   margin-right: 1rem;
   border-radius: 50%;
+}
+@media only screen and (min-width: 800px) {
+  .post-preview ul li::before {
+    margin-left: -1.5rem;
+  }
 }
 
 .section-hero {
@@ -361,7 +389,11 @@ h3.text-statement {
 .important-section {
   font-size: 18px;
   font-weight: 300;
-  padding-top: 5rem;
+}
+@media (min-width: 800px) {
+  .important-section {
+    padding-top: 5rem;
+  }
 }
 .important-section span {
   font-size: 22px;
@@ -441,8 +473,8 @@ h3.text-statement {
 }
 
 .section-advantages {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 13rem;
+  padding-bottom: 0;
 }
 .section-advantages .block-inner-wrapper {
   flex-wrap: wrap;
@@ -455,8 +487,10 @@ h3.text-statement {
   font-size: 18px;
   width: 48%;
 }
-.section-advantages .column > div {
-  margin-left: 3rem;
+@media only screen and (min-width: 800px) {
+  .section-advantages .column > div {
+    margin-left: 3rem;
+  }
 }
 .section-advantages .column p {
   font-size: 18px;
@@ -470,20 +504,33 @@ h3.text-statement {
   opacity: 0.3 !important;
   line-height: 0.9;
 }
+@media only screen and (max-width: 800px) {
+  .section-advantages .column span {
+    font-size: 68px;
+    margin-bottom: 2rem;
+  }
+}
 .section-advantages .column h3 {
   position: relative;
   z-index: 10;
   font-size: 35px;
   margin-bottom: 1.5rem;
-  margin-top: -4rem;
   text-transform: uppercase;
   background: -webkit-linear-gradient(0deg, rgb(18, 184, 255), rgb(150, 255, 148));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media only screen and (min-width: 800px) {
+  .section-advantages .column h3 {
+    margin-top: -4rem;
+  }
+}
 
+.section-services {
+  padding-top: 0;
+}
 .section-services .tag {
-  padding-top: 7rem;
+  padding-top: 10rem;
 }
 .section-services h3.offer-heading {
   width: 70%;
@@ -525,8 +572,12 @@ h3.text-statement {
   text-transform: capitalize;
 }
 .section-services .line ul {
-  padding-left: 1.5rem;
   padding-right: 5rem;
+}
+@media only screen and (min-width: 800px) {
+  .section-services .line ul {
+    padding-left: 1.5rem;
+  }
 }
 .section-services .line p,
 .section-services .line li {
@@ -547,7 +598,7 @@ h3.text-statement {
 .section-services .additional-services {
   border-top: 1px solid rgb(165, 196, 228);
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
   display: flex;
 }
 .section-services .additional-services .line {
@@ -565,7 +616,7 @@ h3.text-statement {
 }
 
 .technologies-block {
-  padding-top: 9rem;
+  padding-top: 15rem;
 }
 
 .left-column {
@@ -688,7 +739,7 @@ h3.text-statement {
 }
 
 .ml-block {
-  padding-top: 7rem;
+  padding-top: 11rem;
   padding-bottom: 7rem;
 }
 .ml-block .ml {
@@ -829,6 +880,9 @@ h3.text-statement {
   .arrow-button {
     width: 4rem;
     height: 4rem;
+  }
+  .section-hero {
+    padding-top: 10rem !important;
   }
   .line,
   .section-subblock {

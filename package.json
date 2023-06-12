@@ -38,7 +38,8 @@
         "react-vfx": "^0.5.0",
         "simplex-noise": "^3.0.1",
         "styled-components": "^5.3.11",
-        "web-vitals": "^2.1.4"
+        "web-vitals": "^2.1.4",
+        "d3": "^7.3.0"
     },
     "scripts": {
         "start": "react-scripts start",

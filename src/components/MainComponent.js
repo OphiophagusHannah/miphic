@@ -21,11 +21,12 @@ const Main = props => {
     return (
         <>
             <div className="">
-                <Nav/>
+
+                <Nav />
                 <div className="">
                     <Query query={Client.fetchPosts()}>
                         {
-                            ({loading, error, data}) => {
+                            ({ loading, error, data }) => {
                                 if (loading) return LoadingPostsJsx();
                                 if (error) {
                                     console.log(error);
@@ -33,14 +34,14 @@ const Main = props => {
                                 }
                                 const POSTS = data.posts;
                                 setPosts(POSTS);
-                                return POSTS.slice(0,6).map(post => (
+                                return POSTS.slice(0, 6).map(post => (
                                     <PostsPreview post={post} />
                                 ));
                             }
                         }
                     </Query>
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         </>
     );
