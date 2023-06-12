@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Poiret+One&family=Sen&family=Space+Grotesk&display=swap');
-body *{
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Poiret+One&family=Sen&family=Space+Grotesk&display=swap");
+body * {
   margin: 0;
-  font-family: 'Sen', sans-serif;
+  font-family: "Sen", sans-serif;
 }
 
 // Overall
@@ -27,45 +27,42 @@ body *{
   min-height: 100vh;
 }
 
-
 .arrow-button {
-    // position: absolute;
-    position: relative;
-    display: block;
-    border: 3px solid #dde6ee;
-    opacity: .5;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
+  // position: absolute;
+  position: relative;
+  display: block;
+  border: 3px solid #dde6ee;
+  opacity: 0.5;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
 
-    &:after {
-      position: absolute;
-      display: inline-block;
-      content: "";
-      width: 15px;
-      height: 15px ;
-      top: 50%;
-      left: 50%;
-      margin-left: -8px;
-      margin-top: -12px;
-      border-bottom: 2px solid;
-      border-right: 2px solid;
-      transform: rotateZ(45deg);
+  &:after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -12px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotateZ(45deg);
   }
   &:hover {
     // border-color: rgb(18, 184, 255);
     opacity: 1;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     &:after {
       opacity: 1;
       // border-color: rgb(18, 184, 255);
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
     }
   }
 }
-
-
 
 .arrow-wrapper {
   width: 10%;
@@ -110,7 +107,6 @@ body *{
   flex-direction: column;
 }
 
-
 .wrapper {
   width: 100%;
   scroll-behavior: smooth;
@@ -151,8 +147,6 @@ body *{
   margin-left: 0;
 }
 
-
-
 // Nav
 
 .logo {
@@ -181,7 +175,7 @@ body *{
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
 .sticky {
@@ -199,13 +193,13 @@ body *{
 .nav-wrapper {
   display: flex;
   align-items: center;
-  transition: background-color .3s linear;
+  transition: background-color 0.3s linear;
 
   a {
     text-decoration: none;
     color: #dde6ee;
     display: block;
-    margin: .5rem;
+    margin: 0.5rem;
     margin-left: 0;
     margin-right: 1.5rem;
     text-transform: lowercase;
@@ -216,13 +210,13 @@ body *{
       @media only screen and (max-width: 768px) {
         font-size: 24px;
       }
-      transition: .3s linear;
+      transition: 0.3s linear;
     }
 
     &:hover {
       li {
         color: rgb(18, 184, 255);
-        transition: .3s linear;
+        transition: 0.3s linear;
       }
     }
   }
@@ -234,7 +228,7 @@ body *{
         margin-right: 0;
 
         li {
-          padding: .5rem 1rem;
+          padding: 0.5rem 1rem;
           cursor: pointer;
           border: 2px solid;
           border-image-slice: 1;
@@ -249,7 +243,7 @@ body *{
           // transition: .3s ease-in-out;
 
           &:hover {
-            background:  linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
+            background: linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
             color: #421fac;
             -webkit-background-clip: none;
             -webkit-text-fill-color: rgb(47, 19, 131);
@@ -259,8 +253,6 @@ body *{
       }
     }
   }
-
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -277,7 +269,7 @@ body *{
 
   .navigation-wrapper {
     justify-content: space-between !important;
-    padding: 1rem  2rem !important;
+    padding: 1rem 2rem !important;
     padding-bottom: 3rem;
   }
 
@@ -289,17 +281,17 @@ body *{
   }
 }
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
   .nav-wrapper.bg-light {
     background-color: #5effe8;
     background: linear-gradient(180deg, #5effe8 0%, #5effe8);
     padding-bottom: 0;
-    transition: background-color .3s linear;
+    transition: background-color 0.3s linear;
 
     .navigation-wrapper {
       padding-top: 0rem;
       padding-bottom: 0rem;
-      transition: .3s linear;
+      transition: 0.3s linear;
     }
 
     .logo svg path {
@@ -308,7 +300,7 @@ body *{
 
     a li {
       color: #020024;
-      transition: .3s linear;
+      transition: 0.3s linear;
     }
 
     .nav-link--end {
@@ -316,7 +308,7 @@ body *{
       margin-right: 0;
 
       li {
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         cursor: pointer;
         border: 2px solid;
         border-image-slice: 1;
@@ -333,17 +325,14 @@ body *{
 
         &:hover {
           border-image-source: linear-gradient(45deg, #12b8ff, #12b8ff);
-          background: -webkit-linear-gradient(0deg,#12b8ff, #12b8ff);
+          background: -webkit-linear-gradient(0deg, #12b8ff, #12b8ff);
           -webkit-text-fill-color: #221787;
           color: #221787;
-
         }
       }
     }
   }
 }
-
-
 
 .post-preview ul {
   padding-left: 0;
@@ -354,14 +343,14 @@ body *{
     align-items: flex-start;
     font-size: 20px;
     line-height: 1.3;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 
     div {
       font-size: 20px;
     }
 
     &::before {
-      content: '';
+      content: "";
       display: flex;
       height: 0.3rem;
       width: 0.3rem;
@@ -369,15 +358,12 @@ body *{
       min-width: 0.3rem;
       border: 2px solid #12b8ff;
       margin-left: -1.5rem;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       margin-right: 1rem;
       border-radius: 50%;
     }
   }
 }
-
-
-
 
 // Hero
 
@@ -387,7 +373,6 @@ body *{
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-
 
   h1 {
     font-size: 9rem;
@@ -469,9 +454,10 @@ h3.text-statement {
     width: 60%;
   }
 
-  p, li {
+  p,
+  li {
     font-weight: 300;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -532,9 +518,7 @@ h3.text-statement {
   }
 }
 
-
 // Benefits
-
 
 .section-advantages {
   padding-top: 7rem;
@@ -561,13 +545,13 @@ h3.text-statement {
     }
 
     span {
-      font-family: 'Poiret One', sans-serif;
+      font-family: "Poiret One", sans-serif;
       font-weight: 300;
       //margin-left: -55px;
       font-size: 148px;
       font-weight: 300;
-      opacity: .3;
-      line-height: .9;
+      opacity: 0.3 !important;
+      line-height: 0.9;
 
       //color: rgba(2,0,36,1)
     }
@@ -585,7 +569,6 @@ h3.text-statement {
     }
   }
 }
-
 
 // Services
 
@@ -610,7 +593,7 @@ h3.text-statement {
   }
 
   .dot {
-    border: 3px solid rgba(#dde6ee, .5);
+    border: 3px solid rgba(#dde6ee, 0.5);
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
@@ -619,10 +602,10 @@ h3.text-statement {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Poiret One', sans-serif;
+    font-family: "Poiret One", sans-serif;
     font-size: 26px;
     font-weight: 900;
-    color: rgba(#dde6ee, .5);
+    color: rgba(#dde6ee, 0.5);
   }
 
   .line {
@@ -641,13 +624,13 @@ h3.text-statement {
     ul {
       padding-left: 1.5rem;
       padding-right: 5rem;
-
     }
 
-    p, li {
+    p,
+    li {
       font-size: 18px;
       font-weight: 300;
-      padding-bottom: .5rem;
+      padding-bottom: 0.5rem;
     }
 
     .button {
@@ -688,13 +671,12 @@ h3.text-statement {
 
 // Technology
 
-
 .technologies-block {
   padding-top: 9rem;
 }
 
 .left-column {
-  width:35%;
+  width: 35%;
 
   padding-right: 5rem;
 
@@ -719,8 +701,9 @@ h3.text-statement {
     display: flex;
     max-width: 1200px;
 
-    .red, .green {
-      transition: .3s ease-in-out;
+    .red,
+    .green {
+      transition: 0.3s ease-in-out;
     }
   }
 
@@ -741,7 +724,7 @@ h3.text-statement {
       display: flex;
       justify-content: center;
       cursor: pointer;
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
 
       h4 {
         margin-top: 1.5rem;
@@ -749,12 +732,12 @@ h3.text-statement {
         text-transform: uppercase;
         font-size: 18px;
         text-decoration: none;
-        opacity: .6;
+        opacity: 0.6;
         border-bottom: 2px solid transparent;
 
         &:hover {
           opacity: 1;
-          transition: .3s ease-in-out;
+          transition: 0.3s ease-in-out;
         }
 
         &.toggle-button-before {
@@ -762,7 +745,7 @@ h3.text-statement {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           opacity: 1;
-          pointer-events:none;
+          pointer-events: none;
           cursor: default;
           &:hover {
             border-bottom: none;
@@ -773,15 +756,14 @@ h3.text-statement {
   }
 
   .image-after {
-
     svg {
       .green {
-        fill:#96ff94;
-        transition: .6s ease-in-out;
+        fill: #96ff94;
+        transition: 0.6s ease-in-out;
       }
       .red {
         fill: #2af4d9;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
       }
     }
 
@@ -800,7 +782,7 @@ h3.text-statement {
       display: flex;
       justify-content: center;
       cursor: pointer;
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
 
       h4 {
         margin-top: 1.5rem;
@@ -808,12 +790,12 @@ h3.text-statement {
         text-transform: uppercase;
         font-size: 18px;
         text-decoration: none;
-        opacity: .6;
+        opacity: 0.6;
         border-bottom: 2px solid transparent;
 
         &:hover {
           opacity: 1;
-          transition: .3s ease-in-out;
+          transition: 0.3s ease-in-out;
         }
 
         &.toggle-button-after {
@@ -821,18 +803,16 @@ h3.text-statement {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           opacity: 1;
-          pointer-events:none;
+          pointer-events: none;
           cursor: default;
           &:hover {
             border-bottom: none;
-
           }
         }
       }
     }
   }
 }
-
 
 // Machine Learning
 
@@ -869,7 +849,8 @@ h3.text-statement {
     width: 60%;
   }
 
-  p, li {
+  p,
+  li {
     font-size: 18px;
     font-weight: 300;
     padding-bottom: 1rem;
@@ -882,10 +863,8 @@ h3.text-statement {
     display: block;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-
   }
 }
-
 
 // Contact Us Block
 
@@ -908,12 +887,10 @@ h3.text-statement {
     justify-content: center;
   }
 
-
   h3 {
     text-transform: capitalize;
     font-size: 48px;
     padding-bottom: 1.5rem;
-
   }
 
   h4 {
@@ -939,7 +916,7 @@ h3.text-statement {
     transition: 2s ease-in-out;
 
     &:hover {
-      background:  linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
+      background: linear-gradient(45deg, rgb(18, 184, 255), rgb(150, 255, 148));
       color: rgb(66, 31, 172);
       -webkit-background-clip: none;
       -webkit-text-fill-color: rgb(47, 19, 131);
@@ -951,7 +928,6 @@ h3.text-statement {
 //@at-root
 
 @media only screen and (max-width: 800px) {
-
   h1 {
     font-size: 70px !important;
     margin-left: -6px !important;
@@ -969,19 +945,18 @@ h3.text-statement {
     align-items: center !important;
     flex-wrap: wrap !important;
     padding: 1rem 1rem !important;
-
   }
 
   .columns-wrapper,
   .block-inner-wrapper {
     align-items: center !important;
     flex-wrap: wrap !important;
-    padding: 0!important;
+    padding: 0 !important;
   }
 
   .section-hero,
   .section-block {
-    height: auto!important;
+    height: auto !important;
     padding: 1rem 1rem !important;
   }
 
@@ -993,8 +968,7 @@ h3.text-statement {
   .offer-heading,
   .block-inner,
   .hero-inner {
-    width: 100%!important;
-
+    width: 100% !important;
   }
 
   .section-hero {
@@ -1034,7 +1008,7 @@ h3.text-statement {
   .right-column,
   .left-column {
     padding-right: 0 !important;
-    width: 100%!important;
+    width: 100% !important;
   }
 
   .left-column {
@@ -1049,13 +1023,14 @@ h3.text-statement {
     padding-top: 5rem !important;
     padding-bottom: 3rem !important;
     display: flex !important;
-     flex-direction: column !important;
-     align-items: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
 
-     h3, h4 {
-      text-align: center  !important;
+    h3,
+    h4 {
+      text-align: center !important;
       padding-bottom: 0 !important;
-     }
+    }
   }
 
   .right-column {
@@ -1068,7 +1043,7 @@ h3.text-statement {
     }
 
     .toggle-buttons h4 {
-      padding: 0  !important;
+      padding: 0 !important;
       font-size: 16px !important;
       text-align: center !important;
     }
@@ -1098,7 +1073,6 @@ h3.text-statement {
 .footer-inner {
   background: #020024;
 
-
   .footer-wrapper {
     max-width: 1200px;
     margin-left: auto;
@@ -1111,7 +1085,7 @@ h3.text-statement {
     a {
       text-decoration: none;
       color: #dde6ee;
-      opacity: .5;
+      opacity: 0.5;
       &:hover {
         opacity: 1;
         color: #12b8ff;
