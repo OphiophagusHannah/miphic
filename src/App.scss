@@ -4,7 +4,7 @@ body * {
   //
   font-family: "Sen", sans-serif;
   @media only screen and (max-width: 800px) {
-    overflow-x: hidden;
+    // overflow-x: hidden;
   }
 }
 
@@ -1066,16 +1066,21 @@ h3.text-statement {
     margin-bottom: 0;
     a {
       display: block;
+      width: 5rem;
+      height: 4rem;
     }
   }
 
   .arrow-button {
     width: 3rem;
     height: 3rem;
+    &.link {
+      margin-top: 1rem;
+    }
   }
 
   .section-hero {
-    padding-top: 10rem !important;
+    padding-top: 17rem !important;
   }
 
   .line,

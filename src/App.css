@@ -3,12 +3,6 @@ body * {
   margin: 0;
   font-family: "Sen", sans-serif;
 }
-@media only screen and (max-width: 800px) {
-  body * {
-    overflow-x: hidden;
-  }
-}
-
 body {
   background-color: #020024;
 }
@@ -894,13 +888,18 @@ h3.text-statement {
   }
   .arrow-wrapper a {
     display: block;
+    width: 5rem;
+    height: 4rem;
   }
   .arrow-button {
     width: 3rem;
     height: 3rem;
   }
+  .arrow-button.link {
+    margin-top: 1rem;
+  }
   .section-hero {
-    padding-top: 10rem !important;
+    padding-top: 17rem !important;
   }
   .line,
   .section-subblock {
