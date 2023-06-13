@@ -33,7 +33,7 @@ function Nav() {
         <nav className={display ? "sticky display" : "sticky"} id="bar">
             <div className={scroll ? "nav-wrapper bg-light" : "nav-wrapper bg-dark"} id="bar">
                 <ul className="navigation-wrapper">
-                    <a href="/" className="nav-link">
+                    <a href="/" className="nav-link" data-aos={"fade-down"}>
                         <li>
                             <div className="logo">
                                 <svg width="564" height="564" viewBox="0 0 564 564" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,12 +44,12 @@ function Nav() {
                     </a>
 
                     <div className="navigation">
-                        <AnchorLink href="#our-mission" className="nav-link" onClick={toggleHamburger}><li>our mission</li></AnchorLink>
-                        <AnchorLink href="#what-we-offer" className="nav-link" onClick={toggleHamburger}><li>what we offer</li></AnchorLink>
-                        <AnchorLink href="#how-it-works" className="nav-link" onClick={toggleHamburger}><li>technology</li></AnchorLink>
-                        <AnchorLink href="#advantages" className="nav-link" onClick={toggleHamburger}><li>platform benefits</li></AnchorLink>
-                        <AnchorLink href="#data" className="nav-link" onClick={toggleHamburger}><li>machine learning</li></AnchorLink>
-                        <a href="mailto:info@miphic.co" className="nav-link nav-link--end"><li>get in touch</li></a>
+                        <AnchorLink href="#our-mission" className="nav-link" onClick={toggleHamburger} data-aos={"fade-down"} data-aos-delay={50}><li>our mission</li></AnchorLink>
+                        <AnchorLink href="#what-we-offer" className="nav-link" onClick={toggleHamburger} data-aos={"fade-down"} data-aos-delay={100}><li>what we offer</li></AnchorLink>
+                        <AnchorLink href="#how-it-works" className="nav-link" onClick={toggleHamburger} data-aos={"fade-down"} data-aos-delay={150}><li>technology</li></AnchorLink>
+                        <AnchorLink href="#advantages" className="nav-link" onClick={toggleHamburger} data-aos={"fade-down"} data-aos-delay={200}><li>platform benefits</li></AnchorLink>
+                        <AnchorLink href="#data" className="nav-link" onClick={toggleHamburger} data-aos={"fade-down"} data-aos-delay={250}><li>machine learning</li></AnchorLink>
+                        <a href="mailto:info@miphic.co" className="nav-link nav-link--end" data-aos={"zoom-in"} data-aos-delay={300}><li>get in touch</li></a>
                     </div>
 
                     <div className="hamburger" onClick={toggleHamburger}>

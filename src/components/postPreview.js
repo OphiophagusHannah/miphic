@@ -31,8 +31,6 @@ const PostPreview = ({ post, noImage }) => {
                 </div>
             </section>
 
-
-
             <section className="section-block section-mission" id="our-mission" >
                 <div className="block-inner-wrapper">
                     <span className="tag" data-aos={"fade-up"}>{post.tagMission}</span>
@@ -58,15 +56,15 @@ const PostPreview = ({ post, noImage }) => {
 
                 <div className="columns-wrapper" data-aos={"fade-up"}>
                     <div className="line" >
-                        <span className="dot" data-aos={"fade-up"}>1</span>
+                        <span className="dot" data-aos={"fade-up"} >1</span>
                         <div dangerouslySetInnerHTML={{ __html: post.offerColumnFirst.html }}></div>
                     </div>
                     <div className="line" >
-                        <span className="dot" data-aos={"fade-up"}>2</span>
+                        <span className="dot" data-aos={"fade-up"} data-aos-delay={100}>2</span>
                         <div dangerouslySetInnerHTML={{ __html: post.offerColumnSecond.html }}></div>
                     </div>
                     <div className="line" >
-                        <span className="dot" data-aos={"fade-up"}>3</span>
+                        <span className="dot" data-aos={"fade-up"} data-aos-delay={200}>3</span>
                         <div dangerouslySetInnerHTML={{ __html: post.offerColumnThird.html }}></div>
                     </div>
                 </div>
@@ -86,13 +84,13 @@ const PostPreview = ({ post, noImage }) => {
                 </div>
             </section>
 
-            <section className="section-block technologies-block" id="how-it-works" data-aos={"fade-up"}>
+            <section className="section-block technologies-block" id="how-it-works" >
                 <div className="block-inner-wrapper block-inner-wrapper--top">
-                    <div className="left-column">
+                    <div className="left-column" data-aos={"fade-up"}>
                         <span className="tag">{post.tagApproach}</span>
                         <div dangerouslySetInnerHTML={{ __html: post.technologyHeading.html }}></div>
                     </div>
-                    <div className="right-column" data-aos={"fade-left"}>
+                    <div className="right-column" data-aos={"fade-up"}>
                         <div className={isActive ? 'image-after' : 'image-before'}>
                             {/* <img className="cover-image cover-image-before" src={ post.beforeTechnologyImage.url } />
                             <img className="cover-image cover-image-after" src={ post.afterTechnologyImage.url } /> */}
@@ -135,9 +133,9 @@ const PostPreview = ({ post, noImage }) => {
                     <div className="block-inner">
                         <div className="block-inner-wrapper ">
                             <div className="column"><span data-aos={"fade-up"}>01</span><div dangerouslySetInnerHTML={{ __html: post.technologyColumnFirst.html }}></div></div>
-                            <div className="column"><span data-aos={"fade-up"}>02</span><div dangerouslySetInnerHTML={{ __html: post.technologyColumnSecond.html }}></div></div>
+                            <div className="column"><span data-aos={"fade-up"} data-aos-delay={100}>02</span><div dangerouslySetInnerHTML={{ __html: post.technologyColumnSecond.html }}></div></div>
                             <div className="column"><span data-aos={"fade-up"}>03</span><div dangerouslySetInnerHTML={{ __html: post.technologyColumnThird.html }}></div></div>
-                            <div className="column"><span data-aos={"fade-up"}>04</span><div dangerouslySetInnerHTML={{ __html: post.technologyColumnFourth.html }}></div></div>
+                            <div className="column"><span data-aos={"fade-up"} data-aos-delay={100}>04</span><div dangerouslySetInnerHTML={{ __html: post.technologyColumnFourth.html }}></div></div>
                         </div>
                     </div>
                 </div>
@@ -155,7 +153,7 @@ const PostPreview = ({ post, noImage }) => {
             <section className="section-block section-block--contact" id="contact" >
                 <div className="contact-block">
                     <div className="contact-heading" dangerouslySetInnerHTML={{ __html: post.contactUsHeading.html }} data-aos={"fade-up"}></div>
-                    <a href={post.contactEmail} className="button" data-aos={"fade-up"}>Send Message</a>
+                    <a href={post.contactEmail} className="button" data-aos={"fade-up"} data-aos={"zoom-in-up"}>Send Message</a>
                 </div>
             </section>
 
