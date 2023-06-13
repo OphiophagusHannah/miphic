@@ -34,25 +34,64 @@ body * {
   // position: absolute;
   position: relative;
   display: block;
-  border: 2px solid #dde6ee;
+  // border: 2px solid #dde6ee;
   opacity: 0.5;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
 
+  &.arrow {
+    background-image: url("https://static-cdn.wdh.gg/assets/arrow_down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &.link {
+    cursor: pointer;
+    height: 40px;
+    width: 50px;
+    // margin: 0px 0 0 -40px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 70px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    animation: move_down 3s ease-in-out infinite;
+  }
+
+  @keyframes move_down {
+    0% {
+      transform: translate(0, -20px);
+    }
+    50% {
+      transform: translate(0, 0px);
+    }
+    100% {
+      transform: translate(0, -20px);
+    }
+  }
+
   &:after {
-    position: absolute;
-    display: inline-block;
-    content: "";
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    left: 50%;
-    margin-left: -8px;
-    margin-top: -12px;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
-    transform: rotateZ(45deg);
+    // position: absolute;
+    // display: inline-block;
+    // content: "";
+    // width: 15px;
+    // height: 15px;
+    // top: 50%;
+    // left: 50%;
+    // margin-left: -8px;
+    // margin-top: -12px;
+    // border-bottom: 2px solid;
+    // border-right: 2px solid;
+    // transform: rotateZ(45deg);
+    // display: block;
+    // content: "";
+    // background-image: url("../public/images/arrow-snake.svg");
+    // background-size: cover;
+    // width: 20px;
+    // height: 40px;
+    // transform: rotateZ(45deg);
   }
   &:hover {
     // border-color: rgb(18, 184, 255);
@@ -71,15 +110,15 @@ body * {
   @media (min-width: 800px) {
     width: 10%;
   }
-  margin-bottom: 5rem;
+  // margin-bottom: 5rem;
   a {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 }
 
 .hero-inner {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .section-block {
@@ -398,9 +437,9 @@ iframe {
 .section-hero {
   height: 80vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 
   h1 {
     font-size: 9rem;
@@ -692,6 +731,7 @@ h3.text-statement {
     .line {
       width: 33%;
       margin-top: 0;
+      padding-top: 3rem;
 
       h4 p {
         font-size: 20px;
@@ -1025,8 +1065,8 @@ h3.text-statement {
   }
 
   .arrow-button {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   .section-hero {

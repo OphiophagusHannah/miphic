@@ -24,8 +24,8 @@ const PostPreview = ({ post, noImage }) => {
                     <h3>{post.heroBody}</h3>
                 </div>
                 <div className="arrow-wrapper" >
-                    <AnchorLink href="#our-mission" className="button" data-aos={"fade-in"}>
-                        <span className="arrow-button" >
+                    <AnchorLink href="#our-mission" className="button">
+                        <span className="arrow-button link arrow" >
                         </span>
                     </AnchorLink>
                 </div>
@@ -69,9 +69,6 @@ const PostPreview = ({ post, noImage }) => {
                         <span className="dot" data-aos={"fade-up"}>3</span>
                         <div dangerouslySetInnerHTML={{ __html: post.offerColumnThird.html }}></div>
                     </div>
-
-
-
                 </div>
                 <div className="additional-services">
                     <div className="line" data-aos={"fade-up"}>

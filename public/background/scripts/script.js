@@ -37,7 +37,7 @@ class THREEScene {
         const ASPECT_RATIO = this.viewport.aspectRatio;
 
         this.camera = new THREE.PerspectiveCamera(FOV, ASPECT_RATIO, NEAR, FAR);
-        this.camera.position.set(0, 0, 17);
+        this.camera.position.set(0, 0, 19);
     }
 
     addObjects() {
@@ -60,7 +60,7 @@ class THREEScene {
         });
 
         this.mesh = new THREE.Mesh(this.geometry, this.material);
-        this.mesh.position.set(this.container.clientWidth / 300, 0, 0);
+        this.mesh.position.set(this.container.clientWidth / 200, 0, 0);
         this.scene.add(this.mesh);
     }
 
