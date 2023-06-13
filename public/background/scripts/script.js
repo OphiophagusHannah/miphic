@@ -11,8 +11,9 @@ class THREEScene {
 
     settings() {
         this.settings = {
-            blur: 0.35,
-            speed: .1
+            blur: 0.21,
+            speed: 0.4,
+            noiseFreq: 0.1
         };
     }
 
