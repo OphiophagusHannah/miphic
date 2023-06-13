@@ -9,6 +9,10 @@ body * {
   }
 }
 
+body {
+  background-color: #020024;
+}
+
 .section-block,
 .section-subblock,
 .section-hero {
