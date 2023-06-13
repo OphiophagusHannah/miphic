@@ -75,6 +75,9 @@ body * {
   transition: 0.3s ease-in-out;
 }
 
+.arrow-wrapper {
+  margin-bottom: 2rem;
+}
 @media (min-width: 800px) {
   .arrow-wrapper {
     width: 10%;
