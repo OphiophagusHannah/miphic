@@ -124,6 +124,7 @@ iframe {
   z-index: 100;
   top: 0;
   width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   background: hsl(243, 100%, 7%);
   background: linear-gradient(180deg, rgba(2, 0, 36, 0.123) 0%, rgb(2, 0, 36) 40%, rgb(47, 19, 131) 100%);
@@ -225,6 +226,10 @@ iframe {
 .nav-wrapper a:hover li {
   color: rgb(18, 184, 255);
   transition: 0.3s linear;
+}
+.nav-wrapper.bg-dark .logo svg {
+  height: 3rem;
+  width: 3rem;
 }
 .nav-wrapper.bg-dark .nav-link--end {
   margin-left: auto;

@@ -168,8 +168,8 @@ iframe {
   position: absolute;
   z-index: 100;
   top: 0;
-
   width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   background: hsl(243, 100%, 7%);
   background: linear-gradient(180deg, rgba(2, 0, 36, 0.123) 0%, rgba(2, 0, 36, 1) 40%, rgb(47, 19, 131) 100%);
@@ -283,6 +283,10 @@ iframe {
   }
 
   &.bg-dark {
+    .logo svg {
+      height: 3rem;
+      width: 3rem;
+    }
     .nav-link {
       &--end {
         margin-left: auto;

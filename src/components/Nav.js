@@ -87,6 +87,9 @@ function Nav() {
 
                     .hamburger{
                         display: initial;
+                        position: fixed;
+                        top: 1.5rem;
+                        right: 1.5rem;
                         padding-top: 10px;
                         margin-left: 10px;
                         z-index: 6;
