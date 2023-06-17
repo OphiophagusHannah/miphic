@@ -153,7 +153,7 @@ const PostPreview = ({ post, noImage }) => {
             <section className="section-block section-block--contact" id="contact" >
                 <div className="contact-block">
                     <div className="contact-heading" dangerouslySetInnerHTML={{ __html: post.contactUsHeading.html }} data-aos={"fade-up"}></div>
-                    <a href={post.contactEmail} className="button" data-aos={"fade-up"} data-aos={"zoom-in-up"}>Send Message</a>
+                    <a href={post.contactEmail} className="button" data-aos={"zoom-in-up"}>Send Message</a>
                 </div>
             </section>
 
