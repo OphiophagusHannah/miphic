@@ -175,6 +175,9 @@ iframe {
   background: linear-gradient(180deg, rgba(2, 0, 36, 0.123) 0%, rgba(2, 0, 36, 1) 40%, rgb(47, 19, 131) 100%);
   position: absolute;
   z-index: 12;
+  @media only screen and (max-width: 800px) {
+    overflow-x: hidden;
+  }
 
   * {
     color: #dde6ee;
@@ -213,9 +216,17 @@ iframe {
 .logo {
   width: 2rem;
   height: 2rem;
+  @media only screen and (max-width: 800px) {
+    width: 3rem;
+    height: 3rem;
+  }
   svg {
     width: 2rem;
     height: 2rem;
+    @media only screen and (max-width: 800px) {
+      width: 3rem;
+      height: 3rem;
+    }
 
     path {
       stroke-width: 30;

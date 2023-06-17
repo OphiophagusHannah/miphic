@@ -130,6 +130,11 @@ iframe {
   position: absolute;
   z-index: 12;
 }
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    overflow-x: hidden;
+  }
+}
 .wrapper * {
   color: #dde6ee;
 }
@@ -164,9 +169,21 @@ iframe {
   width: 2rem;
   height: 2rem;
 }
+@media only screen and (max-width: 800px) {
+  .logo {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .logo svg {
   width: 2rem;
   height: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .logo svg {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .logo svg path {
   stroke-width: 30;
