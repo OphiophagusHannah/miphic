@@ -1,5 +1,5 @@
-export default function Hamburger({ isOpen }){
-    return(
+export default function Hamburger({ isOpen }) {
+    return (
         <>
             <div className="">
                 <div className="burger burger1" />
@@ -7,7 +7,7 @@ export default function Hamburger({ isOpen }){
                 <div className="burger burger3" />
             </div>
 
-            <style jsx>{`
+            <style jsx="true">{`
                 .hamburger{
                     width: 2rem;
                     height: 2rem;
@@ -26,16 +26,16 @@ export default function Hamburger({ isOpen }){
                     transition: all 0.3s linear;
                 }
                 .burger1{
-                    transform: ${ isOpen ? 'rotate(45deg)' : 'rotate(0)'};
+                    transform: ${isOpen ? 'rotate(45deg)' : 'rotate(0)'};
                 }
                 .burger2{
-                    transform: ${ isOpen ? 'translateX(100%)' : 'translateX(0)'};
-                    opacity: ${ isOpen ? 0 : 1};
+                    transform: ${isOpen ? 'translateX(100%)' : 'translateX(0)'};
+                    opacity: ${isOpen ? 0 : 1};
                 }
                 .burger3{
-                    transform: ${ isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+                    transform: ${isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
                 }
-                
+
             `}</style>
         </>
     )

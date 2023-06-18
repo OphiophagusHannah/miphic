@@ -59,7 +59,7 @@ function Nav() {
             </div>
 
 
-            <style jsx>{`
+            <style jsx="true">{`
                 .navigation{
                     width: 100%;
                     display: flex;
